@@ -51,10 +51,10 @@ function wpc_fs() {
 
 		$wpc_fs = fs_dynamic_init(
 			array(
-				'id'             => '0000',
+				'id'             => '31489',
 				'slug'           => 'wp-canary',
 				'type'           => 'plugin',
-				'public_key'     => 'pk_REPLACE_WITH_YOUR_PUBLIC_KEY',
+				'public_key'     => 'pk_e3610dadf66440da415f8363dffac',
 				'is_premium'     => false,
 				'has_addons'     => false,
 				'has_paid_plans' => true,

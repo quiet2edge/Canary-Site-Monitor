@@ -27,67 +27,67 @@ define( 'WPC_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WPC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'WPC_PLUGIN_FILE', __FILE__ );
 
-/**
- * Freemius bootstrap stub.
- *
- * Returns the Freemius instance if the SDK is available,
- * otherwise returns null.
- *
- * @return Freemius|null
- */
-function wpc_fs() {
-	global $wpc_fs;
+if ( ! function_exists( 'wpc_fs' ) ) {
+	/**
+	 * Freemius SDK bootstrap.
+	 *
+	 * @return Freemius
+	 */
+	function wpc_fs() {
+		global $wpc_fs;
 
-	if ( isset( $wpc_fs ) ) {
+		if ( ! isset( $wpc_fs ) ) {
+			// Activate multisite network integration.
+			if ( ! defined( 'WP_FS__PRODUCT_31489_MULTISITE' ) ) {
+				define( 'WP_FS__PRODUCT_31489_MULTISITE', true );
+			}
+
+			// Include Freemius SDK.
+			require_once dirname( __FILE__ ) . '/freemius/start.php';
+
+			$wpc_fs = fs_dynamic_init( array(
+				'id'                  => '31489',
+				'slug'                => 'wp-canary---because-you-shouldnt-wake-up-to-a-broken-site',
+				'type'                => 'plugin',
+				'public_key'          => 'pk_e3610dadf66440da415f8363dffac',
+				'is_premium'          => true,
+				'premium_suffix'      => 'Professional - WP Canary',
+				'has_premium_version' => true,
+				'has_addons'          => false,
+				'has_paid_plans'      => true,
+				'is_org_compliant'    => true,
+				// Automatically removed in the free version. If you're not using the
+				// auto-generated free version, delete this line before uploading to wp.org.
+				'wp_org_gatekeeper'   => 'OA7#BoRiBNqdf52FvzEf!!074aRLPs8fspif$7K1#4u4Csys1fQlCecVcUTOs2mcpeVHi#C2j9d09fOTvbC0HloPT7fFee5WdS3G',
+				'trial'               => array(
+					'days'               => 3,
+					'is_require_payment' => true,
+				),
+				'menu'                => array(
+					'slug'       => 'wpc-settings',
+					'first-path' => 'admin.php?page=wpc-getting-started',
+					'support'    => false,
+					'network'    => true,
+				),
+			) );
+		}
+
 		return $wpc_fs;
 	}
 
-	$sdk_path = WPC_PLUGIN_DIR . 'freemius/start.php';
-
-	if ( file_exists( $sdk_path ) ) {
-		if ( ! function_exists( 'fs_dynamic_init' ) ) {
-			require_once $sdk_path;
-		}
-
-		$wpc_fs = fs_dynamic_init(
-			array(
-				'id'             => '31489',
-				'slug'           => 'wp-canary',
-				'type'           => 'plugin',
-				'public_key'     => 'pk_e3610dadf66440da415f8363dffac',
-				'is_premium'     => false,
-				'has_addons'     => false,
-				'has_paid_plans' => true,
-				'menu'           => array(
-					'slug'        => 'wp-canary',
-					'first-path'  => 'admin.php?page=wp-canary',
-					'account'     => true,
-					'contact'     => false,
-					'support'     => false,
-				),
-			)
-		);
-	}
-
-	return $wpc_fs;
+	// Init Freemius.
+	wpc_fs();
+	// Signal that SDK was initiated.
+	do_action( 'wpc_fs_loaded' );
 }
 
 /**
  * Helper to check if the current site is running the Pro plan.
  *
- * When the Freemius SDK is not installed (development / free install)
- * this always returns false so the plugin degrades gracefully.
- *
  * @return bool
  */
 function wpc_is_pro() {
 	$fs = wpc_fs();
-
-	if ( null === $fs ) {
-		// SDK not installed — check a manual option set during testing.
-		return (bool) get_option( 'wpc_pro_override', false );
-	}
-
 	return $fs->is__premium_only() || ! $fs->is_free_plan();
 }
 

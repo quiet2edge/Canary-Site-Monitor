@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-# Build distributable ZIP packages for WP Site Guardian
+# Build distributable ZIP packages for WP Canary
 # Usage: ./build.sh [version]
-# Outputs: dist/wp-site-guardian-{version}.zip
-#          dist/wp-site-guardian-lite-{version}.zip  (free tier only)
+# Outputs: dist/wp-canary-{version}.zip
+#          dist/wp-canary-lite-{version}.zip  (free tier only)
 
 set -euo pipefail
 
-VERSION="${1:-$(grep "Version:" wp-site-guardian/wp-site-guardian.php | awk '{print $NF}')}"
+VERSION="${1:-$(grep "Version:" wp-canary/wp-canary.php | awk '{print $NF}')}"
 DIST="dist"
-BUILD_DIR="/tmp/wpsg-build-$$"
-PLUGIN_SLUG="wp-site-guardian"
+BUILD_DIR="/tmp/wpc-build-$$"
+PLUGIN_SLUG="wp-canary"
 
-echo "Building WP Site Guardian v${VERSION}..."
+echo "Building WP Canary v${VERSION}..."
 
 mkdir -p "$DIST"
 rm -rf "$BUILD_DIR"
@@ -39,19 +39,19 @@ cp -r "$PLUGIN_SLUG" "$LITE_DIR"
 rm -rf "$LITE_DIR/includes/pro"
 
 # Patch main plugin file: disable pro loader lines
-sed -i "s/wpsg_is_pro()/false/g" "$LITE_DIR/wp-site-guardian.php"
+sed -i "s/wpc_is_pro()/false/g" "$LITE_DIR/wp-canary.php"
 
 # Strip pro admin views (leave stubs showing upgrade prompts)
 for view in monitor-404.php plugin-watchdog.php reports.php; do
   cat > "$LITE_DIR/admin/views/$view" <<'PHP'
 <?php
-// This feature is available in WP Site Guardian Pro.
+// This feature is available in WP Canary Pro.
 // Visit https://wpsiteguardian.com to upgrade.
 if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
 <div class="notice notice-info">
-  <p><?php esc_html_e( 'This feature requires WP Site Guardian Pro.', 'wp-site-guardian' ); ?>
-  <a href="https://wpsiteguardian.com" target="_blank"><?php esc_html_e( 'Upgrade now →', 'wp-site-guardian' ); ?></a></p>
+  <p><?php esc_html_e( 'This feature requires WP Canary Pro.', 'wp-canary' ); ?>
+  <a href="https://wpsiteguardian.com" target="_blank"><?php esc_html_e( 'Upgrade now →', 'wp-canary' ); ?></a></p>
 </div>
 PHP
 done

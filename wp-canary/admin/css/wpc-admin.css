@@ -1,0 +1,390 @@
+/**
+ * WP Canary — Admin Stylesheet
+ * Uses WP admin CSS variables for color compatibility.
+ */
+
+/* =========================================================
+   Variables
+   ========================================================= */
+:root {
+	--wpc-color-ok:       #22863a;
+	--wpc-color-warning:  #e36209;
+	--wpc-color-critical: #cb2431;
+	--wpc-color-info:     #0073aa;
+	--wpc-bg-ok:          #f0fff4;
+	--wpc-bg-warning:     #fff8e1;
+	--wpc-bg-critical:    #ffeef0;
+	--wpc-bg-info:        #e8f4fd;
+	--wpc-border-radius:  4px;
+	--wpc-shadow:         0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* =========================================================
+   Layout
+   ========================================================= */
+.wpc-wrap {
+	max-width: 1200px;
+}
+
+.wpc-page-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 22px;
+}
+
+.wpc-page-title .dashicons {
+	color: var(--wpc-color-info);
+	font-size: 24px;
+	width: 24px;
+	height: 24px;
+}
+
+.wpc-toolbar {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 16px;
+}
+
+.wpc-last-scan {
+	color: #666;
+	font-size: 13px;
+}
+
+/* =========================================================
+   Panels
+   ========================================================= */
+.wpc-panel {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-radius: var(--wpc-border-radius);
+	padding: 16px 20px;
+	margin-bottom: 20px;
+	box-shadow: var(--wpc-shadow);
+}
+
+.wpc-panel h2 {
+	margin: 0 0 12px;
+	font-size: 15px;
+	color: #23282d;
+	border-bottom: 1px solid #f0f0f0;
+	padding-bottom: 8px;
+}
+
+.wpc-panel h3 {
+	margin: 12px 0 8px;
+	font-size: 14px;
+}
+
+.wpc-panel-alert {
+	border-left: 4px solid var(--wpc-color-critical);
+	background: var(--wpc-bg-critical);
+}
+
+.wpc-panel-danger {
+	border-left: 4px solid var(--wpc-color-critical);
+}
+
+/* =========================================================
+   Health Score Card
+   ========================================================= */
+.wpc-health-card {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-radius: var(--wpc-border-radius);
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: var(--wpc-shadow);
+	flex-wrap: wrap;
+}
+
+.wpc-health-score {
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 1;
+	min-width: 80px;
+	text-align: center;
+}
+
+.wpc-health-good   .wpc-health-score { color: var(--wpc-color-ok); }
+.wpc-health-warning .wpc-health-score { color: var(--wpc-color-warning); }
+.wpc-health-critical .wpc-health-score { color: var(--wpc-color-critical); }
+
+.wpc-health-details {
+	flex: 1;
+}
+
+.wpc-health-details h2 {
+	margin: 0 0 4px;
+	font-size: 18px;
+}
+
+.wpc-health-details p {
+	margin: 0;
+	color: #555;
+	font-size: 13px;
+}
+
+.wpc-health-actions {
+	margin-left: auto;
+}
+
+/* =========================================================
+   Metric Grid
+   ========================================================= */
+.wpc-metric-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+	.wpc-metric-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 500px) {
+	.wpc-metric-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.wpc-metric-card {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-radius: var(--wpc-border-radius);
+	padding: 16px;
+	text-align: center;
+	box-shadow: var(--wpc-shadow);
+}
+
+.wpc-metric-card.wpc-metric-alert {
+	border-color: var(--wpc-color-critical);
+	background: var(--wpc-bg-critical);
+}
+
+.wpc-metric-card.wpc-metric-warn {
+	border-color: var(--wpc-color-warning);
+	background: var(--wpc-bg-warning);
+}
+
+.wpc-metric-icon {
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+	color: var(--wpc-color-info);
+	display: block;
+	margin: 0 auto 8px;
+}
+
+.wpc-metric-value {
+	font-size: 32px;
+	font-weight: 700;
+	color: #23282d;
+	line-height: 1;
+}
+
+.wpc-metric-label {
+	font-size: 12px;
+	color: #666;
+	margin-top: 4px;
+}
+
+.wpc-metric-sub {
+	font-size: 11px;
+	color: #888;
+	margin-top: 4px;
+}
+
+/* =========================================================
+   Badges / Status Labels
+   ========================================================= */
+.wpc-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+}
+
+.wpc-badge-ok       { background: var(--wpc-bg-ok);       color: var(--wpc-color-ok); }
+.wpc-badge-warning  { background: var(--wpc-bg-warning);  color: var(--wpc-color-warning); }
+.wpc-badge-critical { background: var(--wpc-bg-critical); color: var(--wpc-color-critical); }
+.wpc-badge-info     { background: var(--wpc-bg-info);     color: var(--wpc-color-info); }
+
+.wpc-pro-badge {
+	background: #f0e5ff;
+	color: #7c4dff;
+}
+
+/* =========================================================
+   Tables
+   ========================================================= */
+.wpc-table {
+	margin-top: 0 !important;
+}
+
+.wpc-table th {
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.wpc-row-alert td {
+	background: #fff5f5 !important;
+}
+
+.wpc-na {
+	color: #999;
+}
+
+/* =========================================================
+   Upsell Banner
+   ========================================================= */
+.wpc-upsell-banner {
+	background: linear-gradient(135deg, #0073aa 0%, #00a0d2 100%);
+	color: #fff;
+	padding: 12px 20px;
+	border-radius: var(--wpc-border-radius);
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.wpc-upsell-banner strong {
+	font-size: 15px;
+}
+
+.wpc-upsell-btn {
+	margin-left: auto !important;
+	background: #fff !important;
+	color: #0073aa !important;
+	border-color: #fff !important;
+}
+
+.wpc-upsell-inline {
+	background: var(--wpc-bg-info);
+	border-left: 3px solid var(--wpc-color-info);
+	padding: 10px 14px;
+	margin-bottom: 16px;
+	font-size: 13px;
+}
+
+/* =========================================================
+   Flood Alert
+   ========================================================= */
+.wpc-flood-alert {
+	padding: 8px 12px;
+	margin-bottom: 8px;
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-radius: var(--wpc-border-radius);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+/* =========================================================
+   Bar Chart
+   ========================================================= */
+.wpc-bar-chart {
+	display: flex;
+	align-items: flex-end;
+	gap: 3px;
+	height: 80px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.wpc-bar-wrap {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	height: 100%;
+}
+
+.wpc-bar {
+	width: 100%;
+	background: var(--wpc-color-info);
+	border-radius: 2px 2px 0 0;
+	min-height: 1px;
+	transition: height 0.3s ease;
+}
+
+.wpc-bar-label {
+	font-size: 9px;
+	color: #888;
+	margin-top: 4px;
+	line-height: 1;
+}
+
+/* =========================================================
+   Notice / Result Messages
+   ========================================================= */
+.wpc-notice {
+	padding: 10px 14px;
+	border-radius: var(--wpc-border-radius);
+	margin-top: 12px;
+	font-size: 13px;
+}
+
+.wpc-notice.is-success { background: var(--wpc-bg-ok);       border-left: 3px solid var(--wpc-color-ok); }
+.wpc-notice.is-error   { background: var(--wpc-bg-critical); border-left: 3px solid var(--wpc-color-critical); }
+.wpc-notice.is-info    { background: var(--wpc-bg-info);     border-left: 3px solid var(--wpc-color-info); }
+
+/* =========================================================
+   Modal
+   ========================================================= */
+.wpc-modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wpc-modal-content {
+	background: #fff;
+	border-radius: var(--wpc-border-radius);
+	padding: 24px;
+	max-width: 480px;
+	width: 90%;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.wpc-modal-content h3 {
+	margin: 0 0 12px;
+	font-size: 16px;
+}
+
+.wpc-modal-actions {
+	display: flex;
+	gap: 8px;
+	margin-top: 16px;
+}
+
+/* =========================================================
+   Danger Button
+   ========================================================= */
+.wpc-btn-danger {
+	color: var(--wpc-color-critical) !important;
+	border-color: var(--wpc-color-critical) !important;
+}
+
+.wpc-btn-danger:hover {
+	background: var(--wpc-bg-critical) !important;
+}

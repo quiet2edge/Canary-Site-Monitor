@@ -1,1 +1,13 @@
-.claude/
+# Freemius SDK (bundled at build time, not tracked in repo)
+wp-canary/freemius/
+
+# Build output
+dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/

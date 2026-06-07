@@ -36,6 +36,9 @@ class WPC_Activator {
 		// Set plugin version.
 		update_option( 'wpc_version', WPC_VERSION );
 
+		// Flag for activation redirect to Getting Started page.
+		set_transient( 'wpc_activation_redirect', true, 30 );
+
 		// Flush rewrite rules.
 		flush_rewrite_rules();
 	}

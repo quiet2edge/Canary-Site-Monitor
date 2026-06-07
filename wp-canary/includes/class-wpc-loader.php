@@ -83,6 +83,7 @@ class WPC_Loader {
 			add_action( 'admin_menu', array( $admin, 'add_plugin_admin_menu' ) );
 			add_action( 'network_admin_menu', array( $admin, 'add_plugin_admin_menu' ) );
 			add_action( 'admin_enqueue_scripts', array( $admin, 'enqueue_scripts' ) );
+			add_action( 'admin_init', array( $admin, 'activation_redirect' ) );
 			add_action( 'wp_ajax_wpc_run_db_scan', array( $admin, 'ajax_run_db_scan' ) );
 			add_action( 'wp_ajax_wpc_repair_table', array( $admin, 'ajax_repair_table' ) );
 			add_action( 'wp_ajax_wpc_dismiss_alert', array( $admin, 'ajax_dismiss_alert' ) );

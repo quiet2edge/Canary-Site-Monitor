@@ -92,6 +92,36 @@ class WPC_Admin {
 			'wpc-settings',
 			array( $this, 'render_settings' )
 		);
+
+		// Hidden page — not shown in menu, only reached via activation redirect.
+		add_submenu_page(
+			null,
+			__( 'Getting Started', 'wp-canary' ),
+			__( 'Getting Started', 'wp-canary' ),
+			$capability,
+			'wpc-getting-started',
+			array( $this, 'render_getting_started' )
+		);
+	}
+
+	/**
+	 * Redirect to Getting Started page after activation.
+	 *
+	 * @return void
+	 */
+	public function activation_redirect() {
+		if ( ! get_transient( 'wpc_activation_redirect' ) ) {
+			return;
+		}
+		delete_transient( 'wpc_activation_redirect' );
+
+		// Don't redirect during bulk activation or in network admin.
+		if ( isset( $_GET['activate-multi'] ) || is_network_admin() ) { // phpcs:ignore WordPress.Security.NonceVerification
+			return;
+		}
+
+		wp_safe_redirect( admin_url( 'admin.php?page=wpc-getting-started' ) );
+		exit;
 	}
 
 	/**
@@ -211,6 +241,15 @@ class WPC_Admin {
 			$this->save_settings();
 		}
 		require_once WPC_PLUGIN_DIR . 'admin/views/settings.php';
+	}
+
+	/**
+	 * Render the Getting Started page.
+	 *
+	 * @return void
+	 */
+	public function render_getting_started() {
+		require_once WPC_PLUGIN_DIR . 'admin/views/getting-started.php';
 	}
 
 	// -------------------------------------------------------------------------

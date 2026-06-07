@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This is a WordPress eXtended RSS file generated for import into WordPress -->
+<!-- https://wordpress.org/export/1.2/ -->
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.2/">
+  <channel>
+    <title>WP Canary</title>
+    <link>https://getwpcanary.com</link>
+    <description>Because you shouldn&#39;t wake up to a broken site.</description>
+    <pubDate>Sat, 07 Jun 2026 00:00:00 +0000</pubDate>
+    <language>en-US</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    <wp:base_site_url>https://getwpcanary.com</wp:base_site_url>
+    <wp:base_blog_url>https://getwpcanary.com</wp:base_blog_url>
+
+    <wp:author>
+      <wp:author_id>1</wp:author_id>
+      <wp:author_login><![CDATA[admin]]></wp:author_login>
+      <wp:author_email><![CDATA[admin@getwpcanary.com]]></wp:author_email>
+      <wp:author_display_name><![CDATA[admin]]></wp:author_display_name>
+      <wp:author_first_name><![CDATA[]]></wp:author_first_name>
+      <wp:author_last_name><![CDATA[]]></wp:author_last_name>
+    </wp:author>
+
+    <wp:category>
+      <wp:term_id>1</wp:term_id>
+      <wp:category_nicename>wordpress-tips</wp:category_nicename>
+      <wp:category_parent></wp:category_parent>
+      <wp:cat_name><![CDATA[WordPress Tips]]></wp:cat_name>
+    </wp:category>
+
+    <!-- ============================
+         PAGE 1: HOME (front-page)
+         ============================ -->
+    <item>
+      <title>Home</title>
+      <link>https://getwpcanary.com/</link>
+      <pubDate>Sat, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink="false">https://getwpcanary.com/?page_id=1</guid>
+      <description></description>
+      <content:encoded><![CDATA[
+<!-- wp:group {"style":{"color":{"background":"#1a2e5a"}},"textColor":"white","className":"hero-section","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-white-color has-text-color hero-section" style="background-color:#1a2e5a">
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:80px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"64px","lineHeight":"1"}}} -->
+<p class="has-text-align-center" style="font-size:64px;line-height:1">&#x1F426;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"clamp(2rem,5vw,3.5rem)","fontWeight":"700"},"color":{"text":"#ffffff"}}} -->
+<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:clamp(2rem,5vw,3.5rem);font-weight:700">Your WordPress Early-Warning System</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.25rem"},"color":{"text":"#c8d8e8"},"spacing":{"margin":{"top":"20px","bottom":"40px"}}}} -->
+<p class="has-text-align-center" style="color:#c8d8e8;font-size:1.25rem;margin-top:20px;margin-bottom:40px">WP Canary watches your site overnight and tells you exactly what broke &mdash; before your customers notice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"16px"}}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"style":{"color":{"background":"#f5c518","text":"#1a2e5a"},"typography":{"fontWeight":"700"},"border":{"radius":"6px"},"spacing":{"padding":{"top":"14px","bottom":"14px","left":"28px","right":"28px"}}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="https://checkout.freemius.com/plugin/31489/plan/51656/" style="background-color:#f5c518;color:#1a2e5a;font-weight:700;border-radius:6px;padding-top:14px;padding-bottom:14px;padding-left:28px;padding-right:28px">Get WP Canary &mdash; $39</a></div>
+<!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline","style":{"color":{"text":"#ffffff"},"border":{"radius":"6px","color":"#ffffff","width":"2px"},"spacing":{"padding":{"top":"14px","bottom":"14px","left":"28px","right":"28px"}}}} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" href="https://getwpcanary.com/pricing/" style="color:#ffffff;border-radius:6px;border-color:#ffffff;border-width:2px;padding-top:14px;padding-bottom:14px;padding-left:28px;padding-right:28px">See Free Features &#x2192;</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+
+</div>
+<!-- /wp:group -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"color":{"background":"#ffffff"},"spacing":{"padding":{"top":"80px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"1100px"}} -->
+<div class="wp-block-group" style="background-color:#ffffff;padding-top:80px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"2.25rem","fontWeight":"700"},"color":{"text":"#1a2e5a"},"spacing":{"margin":{"bottom":"48px"}}}} -->
+<h2 class="wp-block-heading has-text-align-center" style="color:#1a2e5a;font-size:2.25rem;font-weight:700;margin-bottom:48px">Sound familiar?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns {"style":{"spacing":{"blockGap":"32px"}}} -->
+<div class="wp-block-columns">
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"32px","bottom":"32px","left":"28px","right":"28px"}},"color":{"background":"#f8f9fa"}}} -->
+<div class="wp-block-column" style="background-color:#f8f9fa;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:32px;padding-bottom:32px;padding-left:28px;padding-right:28px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2.5rem","lineHeight":"1"}}} -->
+<p style="font-size:2.5rem;line-height:1">&#x1F62B;</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.05rem"},"color":{"text":"#333333"}}} -->
+<p style="font-size:1.05rem;color:#333333">You wake up to a broken site and have no idea what happened overnight.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"32px","bottom":"32px","left":"28px","right":"28px"}},"color":{"background":"#f8f9fa"}}} -->
+<div class="wp-block-column" style="background-color:#f8f9fa;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:32px;padding-bottom:32px;padding-left:28px;padding-right:28px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2.5rem","lineHeight":"1"}}} -->
+<p style="font-size:2.5rem;line-height:1">&#x1F50C;</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.05rem"},"color":{"text":"#333333"}}} -->
+<p style="font-size:1.05rem;color:#333333">Plugins mysteriously deactivate and you only find out from an angry customer.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"32px","bottom":"32px","left":"28px","right":"28px"}},"color":{"background":"#f8f9fa"}}} -->
+<div class="wp-block-column" style="background-color:#f8f9fa;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:32px;padding-bottom:32px;padding-left:28px;padding-right:28px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2.5rem","lineHeight":"1"}}} -->
+<p style="font-size:2.5rem;line-height:1">&#x1F4DC;</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.05rem"},"color":{"text":"#333333"}}} -->
+<p style="font-size:1.05rem;color:#333333">Your debug log is a wall of noise and you can&rsquo;t tell what&rsquo;s actually wrong.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"color":{"background":"#f8f9fa"},"spacing":{"padding":{"top":"80px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group" style="background-color:#f8f9fa;padding-top:80px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"2.25rem","fontWeight":"700"},"color":{"text":"#1a2e5a"},"spacing":{"margin":{"bottom":"48px"}}}} -->
+<h2 class="wp-block-heading has-text-align-center" style="color:#1a2e5a;font-size:2.25rem;font-weight:700;margin-bottom:48px">Everything you need to catch problems before they become disasters</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns {"style":{"spacing":{"blockGap":"24px"}}} -->
+<div class="wp-block-columns">
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"28px","bottom":"28px","left":"24px","right":"24px"}},"color":{"background":"#ffffff"}}} -->
+<div class="wp-block-column" style="background-color:#ffffff;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:28px;padding-bottom:28px;padding-left:24px;padding-right:24px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} --><p style="font-size:2rem">&#x1F5C4;&#xFE0F;</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":4,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700"}}} --><h4 class="wp-block-heading" style="color:#1a2e5a;font-weight:700">Database Table Scanner</h4><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Checks WooCommerce, Yoast, Redirection, and Contact Form 7 tables for missing columns and broken schemas. One-click repair with admin confirmation.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"28px","bottom":"28px","left":"24px","right":"24px"}},"color":{"background":"#ffffff"}}} -->
+<div class="wp-block-column" style="background-color:#ffffff;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:28px;padding-bottom:28px;padding-left:24px;padding-right:24px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} --><p style="font-size:2rem">&#x1F50C;</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":4,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700"}}} --><h4 class="wp-block-heading" style="color:#1a2e5a;font-weight:700">Plugin Status Watchdog</h4><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Monitors your active plugins every 15 minutes and alerts you the moment anything deactivates unexpectedly. Keeps a 30-day history of every change.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"28px","bottom":"28px","left":"24px","right":"24px"}},"color":{"background":"#ffffff"}}} -->
+<div class="wp-block-column" style="background-color:#ffffff;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:28px;padding-bottom:28px;padding-left:24px;padding-right:24px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} --><p style="font-size:2rem">&#x1F6AB;</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":4,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700"}}} --><h4 class="wp-block-heading" style="color:#1a2e5a;font-weight:700">404 Flood Detector</h4><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Identifies IPs and bots generating abnormal 404 traffic. Flags when the flood is causing database stress and suggests exactly what to do.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:columns {"style":{"spacing":{"blockGap":"24px","margin":{"top":"24px"}}}} -->
+<div class="wp-block-columns" style="margin-top:24px">
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"28px","bottom":"28px","left":"24px","right":"24px"}},"color":{"background":"#ffffff"}}} -->
+<div class="wp-block-column" style="background-color:#ffffff;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:28px;padding-bottom:28px;padding-left:24px;padding-right:24px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} --><p style="font-size:2rem">&#x1F4E2;</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":4,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700"}}} --><h4 class="wp-block-heading" style="color:#1a2e5a;font-weight:700">Ad Network Monitor</h4><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Detects Google, Meta, and Bing ad bots hitting your site off-hours and identifies when they&rsquo;re triggering unexpected cron jobs or plugin conflicts.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"28px","bottom":"28px","left":"24px","right":"24px"}},"color":{"background":"#ffffff"}}} -->
+<div class="wp-block-column" style="background-color:#ffffff;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:28px;padding-bottom:28px;padding-left:24px;padding-right:24px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} --><p style="font-size:2rem">&#x1F4CB;</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":4,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700"}}} --><h4 class="wp-block-heading" style="color:#1a2e5a;font-weight:700">Debug Log Analyzer</h4><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Filters out harmless noise and surfaces only actionable errors in plain English. Groups repeated errors and identifies which plugin caused each one.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"28px","bottom":"28px","left":"24px","right":"24px"}},"color":{"background":"#ffffff"}}} -->
+<div class="wp-block-column" style="background-color:#ffffff;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:28px;padding-bottom:28px;padding-left:24px;padding-right:24px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} --><p style="font-size:2rem">&#x2600;&#xFE0F;</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":4,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700"}}} --><h4 class="wp-block-heading" style="color:#1a2e5a;font-weight:700">Morning Email Digest</h4><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Get a plain-English summary of overnight activity delivered to your inbox every morning. Separate technical detail section for developers.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:columns {"style":{"spacing":{"blockGap":"24px","margin":{"top":"24px"}}}} -->
+<div class="wp-block-columns" style="margin-top:24px">
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"28px","bottom":"28px","left":"24px","right":"24px"}},"color":{"background":"#ffffff"}}} -->
+<div class="wp-block-column" style="background-color:#ffffff;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:28px;padding-bottom:28px;padding-left:24px;padding-right:24px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} --><p style="font-size:2rem">&#x1F418;</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":4,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700"}}} --><h4 class="wp-block-heading" style="color:#1a2e5a;font-weight:700">PHP Resource Monitor</h4><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Tracks memory limits, peak usage, and execution timeouts. Alerts you before resource exhaustion takes your site down.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"1px","color":"#e2e8f0"},"spacing":{"padding":{"top":"28px","bottom":"28px","left":"24px","right":"24px"}},"color":{"background":"#ffffff"}}} -->
+<div class="wp-block-column" style="background-color:#ffffff;border-radius:8px;border-width:1px;border-color:#e2e8f0;padding-top:28px;padding-bottom:28px;padding-left:24px;padding-right:24px">
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"2rem"}}} --><p style="font-size:2rem">&#x23F0;</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":4,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700"}}} --><h4 class="wp-block-heading" style="color:#1a2e5a;font-weight:700">WP-Cron Health Monitor</h4><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Detects missed and late cron jobs. Flags unreliable WP-Cron on low-traffic sites and recommends switching to real server cron.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"></div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"color":{"background":"#ffffff"},"spacing":{"padding":{"top":"80px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="background-color:#ffffff;padding-top:80px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"2.25rem","fontWeight":"700"},"color":{"text":"#1a2e5a"},"spacing":{"margin":{"bottom":"48px"}}}} -->
+<h2 class="wp-block-heading has-text-align-center" style="color:#1a2e5a;font-size:2.25rem;font-weight:700;margin-bottom:48px">Simple, honest pricing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns {"style":{"spacing":{"blockGap":"32px"}}} -->
+<div class="wp-block-columns">
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"2px","color":"#c3c4c7"},"spacing":{"padding":{"top":"36px","bottom":"36px","left":"32px","right":"32px"}}}} -->
+<div class="wp-block-column" style="border-radius:8px;border-width:2px;border-color:#c3c4c7;padding-top:36px;padding-bottom:36px;padding-left:32px;padding-right:32px">
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700","fontSize":"1.5rem"}}} --><h3 class="wp-block-heading" style="color:#1a2e5a;font-weight:700;font-size:1.5rem">Free</h3><!-- /wp:heading -->
+<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"3rem","fontWeight":"800"},"color":{"text":"#1a2e5a"}}} --><h2 class="wp-block-heading" style="color:#1a2e5a;font-size:3rem;font-weight:800">$0</h2><!-- /wp:heading -->
+<!-- wp:paragraph {"style":{"color":{"text":"#666666"}}} --><p style="color:#666666">Forever free on WordPress.org</p><!-- /wp:paragraph -->
+<!-- wp:separator {"style":{"color":{"background":"#e2e8f0"}}} --><hr class="wp-block-separator has-alpha-channel-opacity" style="background-color:#e2e8f0;border-color:#e2e8f0"/><!-- /wp:separator -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item --><li>&#x2713; Database table scanner (read-only)</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; WooCommerce, Yoast, Redirection, CF7 schemas</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; Health score dashboard</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><span style="color:#999999">&#x2717; Repairs (Pro only)</span></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><span style="color:#999999">&#x2717; Plugin Watchdog (Pro only)</span></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><span style="color:#999999">&#x2717; 404 Monitor (Pro only)</span></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><span style="color:#999999">&#x2717; Email Digest (Pro only)</span></li><!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"width":100,"style":{"color":{"background":"#1e6fa5","text":"#ffffff"},"border":{"radius":"6px"}}} --><div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="https://wordpress.org/plugins/wp-canary/" style="background-color:#1e6fa5;color:#ffffff;border-radius:6px">Download Free</a></div><!-- /wp:button --></div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"2px","color":"#1e6fa5"},"spacing":{"padding":{"top":"36px","bottom":"36px","left":"32px","right":"32px"}},"color":{"background":"#f0f6fc"}}} -->
+<div class="wp-block-column" style="background-color:#f0f6fc;border-radius:8px;border-width:2px;border-color:#1e6fa5;padding-top:36px;padding-bottom:36px;padding-left:32px;padding-right:32px">
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700","fontSize":"1.5rem"}}} --><h3 class="wp-block-heading" style="color:#1a2e5a;font-weight:700;font-size:1.5rem">Pro</h3><!-- /wp:heading -->
+<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"3rem","fontWeight":"800"},"color":{"text":"#1a2e5a"}}} --><h2 class="wp-block-heading" style="color:#1a2e5a;font-size:3rem;font-weight:800">$39</h2><!-- /wp:heading -->
+<!-- wp:paragraph {"style":{"color":{"text":"#1e6fa5"},"typography":{"fontWeight":"600"}}} --><p style="color:#1e6fa5;font-weight:600">or $29/year</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"style":{"color":{"text":"#666666"}}} --><p style="color:#666666">One-time purchase &middot; 1 year of updates &amp; support</p><!-- /wp:paragraph -->
+<!-- wp:separator {"style":{"color":{"background":"#1e6fa5"}}} --><hr class="wp-block-separator has-alpha-channel-opacity" style="background-color:#1e6fa5;border-color:#1e6fa5"/><!-- /wp:separator -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item --><li>&#x2713; Everything in Free</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; One-click database repairs</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; Plugin Status Watchdog</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; 404 Flood Detector</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; Ad Network Monitor</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; Debug Log Analyzer</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; PHP Resource Monitor</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; WP-Cron Health Monitor</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; Morning Email Digest</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>&#x2713; Email alerts for critical events</li><!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"width":100,"style":{"color":{"background":"#f5c518","text":"#1a2e5a"},"border":{"radius":"6px"},"typography":{"fontWeight":"700"}}} --><div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="https://checkout.freemius.com/plugin/31489/plan/51656/" style="background-color:#f5c518;color:#1a2e5a;font-weight:700;border-radius:6px">Get WP Canary Pro &#x2192;</a></div><!-- /wp:button --></div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"color":{"background":"#ffffff"},"spacing":{"padding":{"top":"80px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+<div class="wp-block-group" style="background-color:#ffffff;padding-top:80px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"2.25rem","fontWeight":"700"},"color":{"text":"#1a2e5a"},"spacing":{"margin":{"bottom":"48px"}}}} -->
+<h2 class="wp-block-heading has-text-align-center" style="color:#1a2e5a;font-size:2.25rem;font-weight:700;margin-bottom:48px">Frequently asked questions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:details {"style":{"border":{"bottom":{"color":"#e2e8f0","width":"1px"}},"spacing":{"padding":{"top":"20px","bottom":"20px"}}}} -->
+<details class="wp-block-details" style="border-bottom-color:#e2e8f0;border-bottom-width:1px;padding-top:20px;padding-bottom:20px"><summary><strong>Does WP Canary slow down my site?</strong></summary>
+<!-- wp:paragraph --><p>No. All scans run during low-traffic windows using WP-Cron. The 404 monitor adds a negligible hook on 404 pages only.</p><!-- /wp:paragraph -->
+</details>
+<!-- /wp:details -->
+
+<!-- wp:details {"style":{"border":{"bottom":{"color":"#e2e8f0","width":"1px"}},"spacing":{"padding":{"top":"20px","bottom":"20px"}}}} -->
+<details class="wp-block-details" style="border-bottom-color:#e2e8f0;border-bottom-width:1px;padding-top:20px;padding-bottom:20px"><summary><strong>Will it conflict with Wordfence or Sucuri?</strong></summary>
+<!-- wp:paragraph --><p>WP Canary is designed to operate in read-mostly mode. All write operations require explicit admin confirmation so security plugins don&rsquo;t flag it.</p><!-- /wp:paragraph -->
+</details>
+<!-- /wp:details -->
+
+<!-- wp:details {"style":{"border":{"bottom":{"color":"#e2e8f0","width":"1px"}},"spacing":{"padding":{"top":"20px","bottom":"20px"}}}} -->
+<details class="wp-block-details" style="border-bottom-color:#e2e8f0;border-bottom-width:1px;padding-top:20px;padding-bottom:20px"><summary><strong>What happens after the first year on the one-time plan?</strong></summary>
+<!-- wp:paragraph --><p>The plugin keeps working forever. You just won&rsquo;t receive new feature updates or support after year one unless you renew.</p><!-- /wp:paragraph -->
+</details>
+<!-- /wp:details -->
+
+<!-- wp:details {"style":{"border":{"bottom":{"color":"#e2e8f0","width":"1px"}},"spacing":{"padding":{"top":"20px","bottom":"20px"}}}} -->
+<details class="wp-block-details" style="border-bottom-color:#e2e8f0;border-bottom-width:1px;padding-top:20px;padding-bottom:20px"><summary><strong>Does it work on WordPress Multisite?</strong></summary>
+<!-- wp:paragraph --><p>Yes. WP Canary is network-activated and managed from the network admin by the super admin.</p><!-- /wp:paragraph -->
+</details>
+<!-- /wp:details -->
+
+<!-- wp:details {"style":{"border":{"bottom":{"color":"#e2e8f0","width":"1px"}},"spacing":{"padding":{"top":"20px","bottom":"20px"}}}} -->
+<details class="wp-block-details" style="border-bottom-color:#e2e8f0;border-bottom-width:1px;padding-top:20px;padding-bottom:20px"><summary><strong>Which hosts is it compatible with?</strong></summary>
+<!-- wp:paragraph --><p>Tested on A2 Hosting, WP Engine, SiteGround, Kinsta, and Bluehost. No external API dependencies &mdash; everything runs locally.</p><!-- /wp:paragraph -->
+</details>
+<!-- /wp:details -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"color":{"background":"#1a2e5a"},"spacing":{"padding":{"top":"80px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"700px"}} -->
+<div class="wp-block-group" style="background-color:#1a2e5a;padding-top:80px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"2.25rem","fontWeight":"700"},"color":{"text":"#ffffff"}}} -->
+<h2 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:2.25rem;font-weight:700">Stop finding out about problems from your customers</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#c8d8e8"},"typography":{"fontSize":"1.15rem"},"spacing":{"margin":{"top":"16px","bottom":"36px"}}}} -->
+<p class="has-text-align-center" style="color:#c8d8e8;font-size:1.15rem;margin-top:16px;margin-bottom:36px">Join site owners who get their morning digest instead of morning panic.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"color":{"background":"#f5c518","text":"#1a2e5a"},"border":{"radius":"6px"},"typography":{"fontWeight":"700"},"spacing":{"padding":{"top":"16px","bottom":"16px","left":"32px","right":"32px"}}}} --><div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="https://checkout.freemius.com/plugin/31489/plan/51656/" style="background-color:#f5c518;color:#1a2e5a;font-weight:700;border-radius:6px;padding-top:16px;padding-bottom:16px;padding-left:32px;padding-right:32px">Get WP Canary Pro &mdash; $39</a></div><!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+</div>
+<!-- /wp:group -->
+]]></content:encoded>
+      <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+      <wp:post_id>1</wp:post_id>
+      <wp:post_date><![CDATA[2026-06-07 00:00:00]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_date_gmt>
+      <wp:post_modified><![CDATA[2026-06-07 00:00:00]]></wp:post_modified>
+      <wp:post_modified_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_modified_gmt>
+      <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[home]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[page]]></wp:post_type>
+      <wp:post_password><![CDATA[]]></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+        <wp:meta_value><![CDATA[front-page.php]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+
+    <!-- ============================
+         PAGE 2: PRICING
+         ============================ -->
+    <item>
+      <title>Pricing</title>
+      <link>https://getwpcanary.com/pricing/</link>
+      <pubDate>Sat, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink="false">https://getwpcanary.com/?page_id=2</guid>
+      <description></description>
+      <content:encoded><![CDATA[
+<!-- wp:group {"style":{"color":{"background":"#1a2e5a"},"spacing":{"padding":{"top":"60px","bottom":"60px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"700px"}} -->
+<div class="wp-block-group" style="background-color:#1a2e5a;padding-top:60px;padding-bottom:60px;padding-left:40px;padding-right:40px">
+<!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"3rem","fontWeight":"700"}}} -->
+<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:3rem;font-weight:700">Pricing</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#c8d8e8"},"typography":{"fontSize":"1.2rem"}}} -->
+<p class="has-text-align-center" style="color:#c8d8e8;font-size:1.2rem">Start free. Upgrade when you need the full early-warning system.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"color":{"background":"#ffffff"},"spacing":{"padding":{"top":"80px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"1000px"}} -->
+<div class="wp-block-group" style="background-color:#ffffff;padding-top:80px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:heading {"textAlign":"center","level":2,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"2rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"48px"}}}} -->
+<h2 class="wp-block-heading has-text-align-center" style="color:#1a2e5a;font-size:2rem;font-weight:700;margin-bottom:48px">Compare Plans</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table {"style":{"border":{"width":"1px","color":"#e2e8f0"},"typography":{"fontSize":"0.95rem"}}} -->
+<figure class="wp-block-table" style="border-width:1px;border-color:#e2e8f0;font-size:0.95rem"><table><thead><tr><th>Feature</th><th style="text-align:center">Free</th><th style="text-align:center;background-color:#f0f6fc;color:#1a2e5a;font-weight:700">Pro</th></tr></thead><tbody>
+<tr><td>Database Table Scanner (read-only)</td><td style="text-align:center">&#x2713;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>WooCommerce, Yoast, Redirection, CF7 schemas</td><td style="text-align:center">&#x2713;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>Health score dashboard</td><td style="text-align:center">&#x2713;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>One-click database repairs</td><td style="text-align:center;color:#999999">&#x2717;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>Plugin Status Watchdog (15-min monitoring)</td><td style="text-align:center;color:#999999">&#x2717;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>404 Flood Detector with bot ID</td><td style="text-align:center;color:#999999">&#x2717;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>Ad Network Monitor (Google, Meta, Bing)</td><td style="text-align:center;color:#999999">&#x2717;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>Debug Log Analyzer</td><td style="text-align:center;color:#999999">&#x2717;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>PHP Resource Monitor</td><td style="text-align:center;color:#999999">&#x2717;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>WP-Cron Health Monitor</td><td style="text-align:center;color:#999999">&#x2717;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>Morning Email Digest</td><td style="text-align:center;color:#999999">&#x2717;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td>Email alerts for critical events</td><td style="text-align:center;color:#999999">&#x2717;</td><td style="text-align:center;background-color:#f0f6fc">&#x2713;</td></tr>
+<tr><td><strong>Price</strong></td><td style="text-align:center"><strong>$0</strong></td><td style="text-align:center;background-color:#f0f6fc"><strong>$39 one-time or $29/yr</strong></td></tr>
+<tr><td></td><td style="text-align:center"><a href="https://wordpress.org/plugins/wp-canary/">Download Free</a></td><td style="text-align:center;background-color:#f0f6fc"><a href="https://checkout.freemius.com/plugin/31489/plan/51656/">Get Pro &#x2192;</a></td></tr>
+</tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:columns {"style":{"spacing":{"blockGap":"32px","margin":{"top":"48px"}}}} -->
+<div class="wp-block-columns" style="margin-top:48px">
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"2px","color":"#c3c4c7"},"spacing":{"padding":{"top":"36px","bottom":"36px","left":"32px","right":"32px"}}}} -->
+<div class="wp-block-column" style="border-radius:8px;border-width:2px;border-color:#c3c4c7;padding-top:36px;padding-bottom:36px;padding-left:32px;padding-right:32px">
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700","fontSize":"1.5rem"}}} --><h3 class="wp-block-heading" style="color:#1a2e5a;font-weight:700;font-size:1.5rem">Free</h3><!-- /wp:heading -->
+<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"3rem","fontWeight":"800"},"color":{"text":"#1a2e5a"}}} --><h2 class="wp-block-heading" style="color:#1a2e5a;font-size:3rem;font-weight:800">$0</h2><!-- /wp:heading -->
+<!-- wp:paragraph {"style":{"color":{"text":"#666666"}}} --><p style="color:#666666">Forever free on WordPress.org</p><!-- /wp:paragraph -->
+<!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button {"width":100,"style":{"color":{"background":"#1e6fa5","text":"#ffffff"},"border":{"radius":"6px"}}} --><div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="https://wordpress.org/plugins/wp-canary/" style="background-color:#1e6fa5;color:#ffffff;border-radius:6px">Download Free</a></div><!-- /wp:button --></div><!-- /wp:buttons -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"border":{"radius":"8px","width":"2px","color":"#1e6fa5"},"spacing":{"padding":{"top":"36px","bottom":"36px","left":"32px","right":"32px"}},"color":{"background":"#f0f6fc"}}} -->
+<div class="wp-block-column" style="background-color:#f0f6fc;border-radius:8px;border-width:2px;border-color:#1e6fa5;padding-top:36px;padding-bottom:36px;padding-left:32px;padding-right:32px">
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700","fontSize":"1.5rem"}}} --><h3 class="wp-block-heading" style="color:#1a2e5a;font-weight:700;font-size:1.5rem">Pro</h3><!-- /wp:heading -->
+<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"3rem","fontWeight":"800"},"color":{"text":"#1a2e5a"}}} --><h2 class="wp-block-heading" style="color:#1a2e5a;font-size:3rem;font-weight:800">$39</h2><!-- /wp:heading -->
+<!-- wp:paragraph {"style":{"color":{"text":"#1e6fa5"},"typography":{"fontWeight":"600"}}} --><p style="color:#1e6fa5;font-weight:600">or $29/year</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"style":{"color":{"text":"#666666"}}} --><p style="color:#666666">One-time purchase &middot; 1 year of updates &amp; support</p><!-- /wp:paragraph -->
+<!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button {"width":100,"style":{"color":{"background":"#f5c518","text":"#1a2e5a"},"border":{"radius":"6px"},"typography":{"fontWeight":"700"}}} --><div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="https://checkout.freemius.com/plugin/31489/plan/51656/" style="background-color:#f5c518;color:#1a2e5a;font-weight:700;border-radius:6px">Get WP Canary Pro &#x2192;</a></div><!-- /wp:button --></div><!-- /wp:buttons -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"color":{"background":"#f8f9fa"},"spacing":{"padding":{"top":"80px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+<div class="wp-block-group" style="background-color:#f8f9fa;padding-top:80px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"2rem","fontWeight":"700"},"color":{"text":"#1a2e5a"},"spacing":{"margin":{"bottom":"40px"}}}} -->
+<h2 class="wp-block-heading has-text-align-center" style="color:#1a2e5a;font-size:2rem;font-weight:700;margin-bottom:40px">Frequently asked questions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary><strong>Does WP Canary slow down my site?</strong></summary>
+<!-- wp:paragraph --><p>No. All scans run during low-traffic windows using WP-Cron. The 404 monitor adds a negligible hook on 404 pages only.</p><!-- /wp:paragraph -->
+</details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary><strong>Will it conflict with Wordfence or Sucuri?</strong></summary>
+<!-- wp:paragraph --><p>WP Canary is designed to operate in read-mostly mode. All write operations require explicit admin confirmation so security plugins don&rsquo;t flag it.</p><!-- /wp:paragraph -->
+</details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary><strong>What happens after the first year on the one-time plan?</strong></summary>
+<!-- wp:paragraph --><p>The plugin keeps working forever. You just won&rsquo;t receive new feature updates or support after year one unless you renew.</p><!-- /wp:paragraph -->
+</details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary><strong>Does it work on WordPress Multisite?</strong></summary>
+<!-- wp:paragraph --><p>Yes. WP Canary is network-activated and managed from the network admin by the super admin.</p><!-- /wp:paragraph -->
+</details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary><strong>Which hosts is it compatible with?</strong></summary>
+<!-- wp:paragraph --><p>Tested on A2 Hosting, WP Engine, SiteGround, Kinsta, and Bluehost. No external API dependencies &mdash; everything runs locally.</p><!-- /wp:paragraph -->
+</details>
+<!-- /wp:details -->
+
+</div>
+<!-- /wp:group -->
+]]></content:encoded>
+      <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+      <wp:post_id>2</wp:post_id>
+      <wp:post_date><![CDATA[2026-06-07 00:00:00]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_date_gmt>
+      <wp:post_modified><![CDATA[2026-06-07 00:00:00]]></wp:post_modified>
+      <wp:post_modified_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_modified_gmt>
+      <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[pricing]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>1</wp:menu_order>
+      <wp:post_type><![CDATA[page]]></wp:post_type>
+      <wp:post_password><![CDATA[]]></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+        <wp:meta_value><![CDATA[default]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+
+    <!-- ============================
+         PAGE 3: DOCUMENTATION
+         ============================ -->
+    <item>
+      <title>Documentation</title>
+      <link>https://getwpcanary.com/docs/</link>
+      <pubDate>Sat, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink="false">https://getwpcanary.com/?page_id=3</guid>
+      <description></description>
+      <content:encoded><![CDATA[
+<!-- wp:group {"style":{"color":{"background":"#1a2e5a"},"spacing":{"padding":{"top":"60px","bottom":"60px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+<div class="wp-block-group" style="background-color:#1a2e5a;padding-top:60px;padding-bottom:60px;padding-left:40px;padding-right:40px">
+<!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"3rem","fontWeight":"700"}}} -->
+<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:3rem;font-weight:700">Documentation</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#c8d8e8"},"typography":{"fontSize":"1.15rem"}}} -->
+<p class="has-text-align-center" style="color:#c8d8e8;font-size:1.15rem">Everything you need to install, configure, and get the most out of WP Canary.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"color":{"background":"#ffffff"},"spacing":{"padding":{"top":"60px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="background-color:#ffffff;padding-top:60px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:columns {"style":{"spacing":{"blockGap":"48px"}}} -->
+<div class="wp-block-columns">
+
+<!-- wp:column -->
+<div class="wp-block-column">
+
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700","fontSize":"1.25rem"},"spacing":{"margin":{"bottom":"16px"}}}} -->
+<h3 class="wp-block-heading" style="color:#1a2e5a;font-weight:700;font-size:1.25rem;margin-bottom:16px">Getting Started</h3>
+<!-- /wp:heading -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><a href="/docs/getting-started/">Getting Started</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/installation/">Installation Guide</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/upgrading-free-to-pro/">Upgrading Free to Pro</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/multisite-setup/">Multisite Setup</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/settings-reference/">Settings Reference</a></li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700","fontSize":"1.25rem"},"spacing":{"margin":{"top":"32px","bottom":"16px"}}}} -->
+<h3 class="wp-block-heading" style="color:#1a2e5a;font-weight:700;font-size:1.25rem;margin-top:32px;margin-bottom:16px">Compatibility</h3>
+<!-- /wp:heading -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><a href="/docs/compatibility/">Compatibility (Wordfence, Sucuri, iThemes)</a></li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column">
+
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontWeight":"700","fontSize":"1.25rem"},"spacing":{"margin":{"bottom":"16px"}}}} -->
+<h3 class="wp-block-heading" style="color:#1a2e5a;font-weight:700;font-size:1.25rem;margin-bottom:16px">Features</h3>
+<!-- /wp:heading -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li><a href="/docs/database-scanner/">Database Scanner</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/plugin-watchdog/">Plugin Watchdog</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/404-monitor/">404 Monitor</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/ad-network-monitor/">Ad Network Monitor</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/debug-log-analyzer/">Debug Log Analyzer</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/php-resource-monitor/">PHP Resource Monitor</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/wp-cron-health-monitor/">WP-Cron Health Monitor</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/docs/morning-email-digest/">Morning Email Digest</a></li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
+
+</div>
+<!-- /wp:group -->
+]]></content:encoded>
+      <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+      <wp:post_id>3</wp:post_id>
+      <wp:post_date><![CDATA[2026-06-07 00:00:00]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_date_gmt>
+      <wp:post_modified><![CDATA[2026-06-07 00:00:00]]></wp:post_modified>
+      <wp:post_modified_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_modified_gmt>
+      <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[docs]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>2</wp:menu_order>
+      <wp:post_type><![CDATA[page]]></wp:post_type>
+      <wp:post_password><![CDATA[]]></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+        <wp:meta_value><![CDATA[default]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+
+    <!-- ============================
+         PAGE 4: BLOG
+         ============================ -->
+    <item>
+      <title>Blog</title>
+      <link>https://getwpcanary.com/blog/</link>
+      <pubDate>Sat, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink="false">https://getwpcanary.com/?page_id=4</guid>
+      <description></description>
+      <content:encoded><![CDATA[
+<!-- wp:group {"style":{"color":{"background":"#1a2e5a"},"spacing":{"padding":{"top":"60px","bottom":"60px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+<div class="wp-block-group" style="background-color:#1a2e5a;padding-top:60px;padding-bottom:60px;padding-left:40px;padding-right:40px">
+<!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"3rem","fontWeight":"700"}}} -->
+<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:3rem;font-weight:700">Blog</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#c8d8e8"},"typography":{"fontSize":"1.15rem"}}} -->
+<p class="has-text-align-center" style="color:#c8d8e8;font-size:1.15rem">WordPress tips, product updates, and site health guides from the WP Canary team.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"color":{"background":"#ffffff"},"spacing":{"padding":{"top":"60px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+<div class="wp-block-group" style="background-color:#ffffff;padding-top:60px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+<!-- wp:query {"queryId":1,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"40px"},"padding":{"bottom":"40px"}},"border":{"bottom":{"color":"#e2e8f0","width":"1px"}}}} -->
+<div class="wp-block-group" style="border-bottom-color:#e2e8f0;border-bottom-width:1px;margin-bottom:40px;padding-bottom:40px">
+<!-- wp:post-title {"isLink":true,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"1.5rem","fontWeight":"700"}}} /-->
+<!-- wp:post-date {"style":{"color":{"text":"#888888"},"typography":{"fontSize":"0.9rem"}}} /-->
+<!-- wp:post-excerpt {"moreText":"Read more &#x2192;","style":{"spacing":{"margin":{"top":"12px"}}}} /-->
+</div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+<!-- wp:query-no-results -->
+<!-- wp:paragraph --><p>No posts found. Check back soon!</p><!-- /wp:paragraph -->
+<!-- /wp:query-no-results -->
+</div>
+<!-- /wp:query -->
+</div>
+<!-- /wp:group -->
+]]></content:encoded>
+      <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+      <wp:post_id>4</wp:post_id>
+      <wp:post_date><![CDATA[2026-06-07 00:00:00]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_date_gmt>
+      <wp:post_modified><![CDATA[2026-06-07 00:00:00]]></wp:post_modified>
+      <wp:post_modified_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_modified_gmt>
+      <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[blog]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>3</wp:menu_order>
+      <wp:post_type><![CDATA[page]]></wp:post_type>
+      <wp:post_password><![CDATA[]]></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+        <wp:meta_value><![CDATA[default]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+
+    <!-- ============================
+         PAGE 5: CHANGELOG
+         ============================ -->
+    <item>
+      <title>Changelog</title>
+      <link>https://getwpcanary.com/changelog/</link>
+      <pubDate>Sat, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink="false">https://getwpcanary.com/?page_id=5</guid>
+      <description></description>
+      <content:encoded><![CDATA[
+<!-- wp:group {"style":{"color":{"background":"#1a2e5a"},"spacing":{"padding":{"top":"60px","bottom":"60px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+<div class="wp-block-group" style="background-color:#1a2e5a;padding-top:60px;padding-bottom:60px;padding-left:40px;padding-right:40px">
+<!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"3rem","fontWeight":"700"}}} -->
+<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;font-size:3rem;font-weight:700">Changelog</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#c8d8e8"}}} -->
+<p class="has-text-align-center" style="color:#c8d8e8">A complete history of WP Canary releases and improvements.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"color":{"background":"#ffffff"},"spacing":{"padding":{"top":"60px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+<div class="wp-block-group" style="background-color:#ffffff;padding-top:60px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:group {"style":{"border":{"left":{"color":"#f5c518","width":"4px"}},"spacing":{"padding":{"left":"28px","bottom":"40px"}}}} -->
+<div class="wp-block-group" style="border-left-color:#f5c518;border-left-width:4px;padding-left:28px;padding-bottom:40px">
+
+<!-- wp:heading {"level":2,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"1.75rem","fontWeight":"700"}}} -->
+<h2 class="wp-block-heading" style="color:#1a2e5a;font-size:1.75rem;font-weight:700">v1.0.0 &mdash; June 2026</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#666666"},"typography":{"fontSize":"0.9rem"}}} -->
+<p style="color:#666666;font-size:0.9rem">Initial public release</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item --><li>Initial release</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Database Table Health Scanner (WooCommerce, Yoast, Redirection, CF7/Flamingo)</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Plugin Status Watchdog with 30-day history</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>404 Flood Detector with bot identification</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Ad Network Interference Monitor (Google, Meta, Bing)</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Debug Log Analyzer with noise filtering</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>PHP Resource Monitor</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>WP-Cron Health Monitor</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Morning Email Digest</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Freemius licensing (one-time $39 / $29/year)</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Free version available on WordPress.org</li><!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+
+</div>
+<!-- /wp:group -->
+
+</div>
+<!-- /wp:group -->
+]]></content:encoded>
+      <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+      <wp:post_id>5</wp:post_id>
+      <wp:post_date><![CDATA[2026-06-07 00:00:00]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_date_gmt>
+      <wp:post_modified><![CDATA[2026-06-07 00:00:00]]></wp:post_modified>
+      <wp:post_modified_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_modified_gmt>
+      <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[changelog]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>4</wp:menu_order>
+      <wp:post_type><![CDATA[page]]></wp:post_type>
+      <wp:post_password><![CDATA[]]></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+        <wp:meta_value><![CDATA[default]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+
+    <!-- ============================
+         PAGE 6: PRIVACY POLICY (placeholder)
+         ============================ -->
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://getwpcanary.com/privacy-policy/</link>
+      <pubDate>Sat, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink="false">https://getwpcanary.com/?page_id=6</guid>
+      <description></description>
+      <content:encoded><![CDATA[
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"60px","bottom":"80px","left":"40px","right":"40px"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+<div class="wp-block-group" style="padding-top:60px;padding-bottom:80px;padding-left:40px;padding-right:40px">
+
+<!-- wp:heading {"level":1,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"2.5rem","fontWeight":"700"}}} -->
+<h1 class="wp-block-heading" style="color:#1a2e5a;font-size:2.5rem;font-weight:700">Privacy Policy</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#666666"}}} -->
+<p style="color:#666666"><em>Last updated: June 7, 2026</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>WP Canary (getwpcanary.com) respects your privacy. This policy explains what data we collect, how we use it, and your rights regarding that data.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"1.5rem","fontWeight":"700"}}} -->
+<h2 class="wp-block-heading" style="color:#1a2e5a;font-size:1.5rem;font-weight:700">Data Collection</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The WP Canary plugin operates entirely locally on your WordPress installation. No site data is transmitted to our servers. When you purchase a Pro license via Freemius, your name and email address are processed by Freemius under their privacy policy.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"1.5rem","fontWeight":"700"}}} -->
+<h2 class="wp-block-heading" style="color:#1a2e5a;font-size:1.5rem;font-weight:700">Contact</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>For privacy questions, contact us at privacy@getwpcanary.com.</p>
+<!-- /wp:paragraph -->
+
+</div>
+<!-- /wp:group -->
+]]></content:encoded>
+      <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+      <wp:post_id>6</wp:post_id>
+      <wp:post_date><![CDATA[2026-06-07 00:00:00]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_date_gmt>
+      <wp:post_modified><![CDATA[2026-06-07 00:00:00]]></wp:post_modified>
+      <wp:post_modified_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_modified_gmt>
+      <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[privacy-policy]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>5</wp:menu_order>
+      <wp:post_type><![CDATA[page]]></wp:post_type>
+      <wp:post_password><![CDATA[]]></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+        <wp:meta_value><![CDATA[default]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+
+    <!-- ============================
+         POST 7: BLOG POST
+         ============================ -->
+    <item>
+      <title>Why WordPress Plugins Mysteriously Deactivate (And How to Catch It)</title>
+      <link>https://getwpcanary.com/blog/why-wordpress-plugins-mysteriously-deactivate/</link>
+      <pubDate>Sat, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink="false">https://getwpcanary.com/?p=7</guid>
+      <description></description>
+      <content:encoded><![CDATA[
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"20px","bottom":"60px"}}},"layout":{"type":"constrained","contentSize":"780px"}} -->
+<div class="wp-block-group" style="padding-top:20px;padding-bottom:60px">
+
+<!-- wp:paragraph {"style":{"color":{"text":"#555555"},"typography":{"fontSize":"1.1rem","lineHeight":"1.8"}}} -->
+<p style="color:#555555;font-size:1.1rem;line-height:1.8">You log into your WordPress admin on a Tuesday morning and notice your WooCommerce store stopped processing payments some time the previous night. The culprit? A plugin silently deactivated itself, and nobody — not you, not your customers (well, except for the angry ones) — knew about it until the damage was done.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#555555"},"typography":{"fontSize":"1.1rem","lineHeight":"1.8"}}} -->
+<p style="color:#555555;font-size:1.1rem;line-height:1.8">Plugin deactivation is one of the sneakiest problems in WordPress because there is no built-in notification system. WordPress simply deactivates a plugin and moves on, leaving you to discover the gap on your own. But why does it happen in the first place?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"1.6rem","fontWeight":"700"},"spacing":{"margin":{"top":"40px","bottom":"16px"}}}} -->
+<h2 class="wp-block-heading" style="color:#1a2e5a;font-size:1.6rem;font-weight:700;margin-top:40px;margin-bottom:16px">The Most Common Causes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"1.2rem","fontWeight":"700"}}} -->
+<h3 class="wp-block-heading" style="color:#1a2e5a;font-size:1.2rem;font-weight:700">1. Hosting Timeouts During Updates</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#555555"},"typography":{"lineHeight":"1.8"}}} -->
+<p style="color:#555555;line-height:1.8">When WordPress runs a plugin update, it temporarily deactivates the plugin, swaps out the files, then reactivates it. If your server has a tight PHP execution time limit (common on shared hosts) and the file swap takes too long, the process dies mid-update. The plugin is left deactivated because the reactivation step never ran.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"1.2rem","fontWeight":"700"},"spacing":{"margin":{"top":"24px"}}}} -->
+<h3 class="wp-block-heading" style="color:#1a2e5a;font-size:1.2rem;font-weight:700;margin-top:24px">2. PHP Fatal Errors on Activation</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#555555"},"typography":{"lineHeight":"1.8"}}} -->
+<p style="color:#555555;line-height:1.8">WordPress has a self-protection mechanism: if a plugin throws a PHP fatal error, WordPress deactivates it to prevent a complete site crash. This is a good safety feature, but it means a bad plugin update or a PHP version incompatibility can silently kill a plugin you depend on. The error gets logged (if debug logging is enabled), but nothing tells you the plugin is gone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"1.2rem","fontWeight":"700"},"spacing":{"margin":{"top":"24px"}}}} -->
+<h3 class="wp-block-heading" style="color:#1a2e5a;font-size:1.2rem;font-weight:700;margin-top:24px">3. Database Errors During Plugin Operations</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#555555"},"typography":{"lineHeight":"1.8"}}} -->
+<p style="color:#555555;line-height:1.8">Some plugins write to the database during activation and deactivation hooks. If a database table is missing a column, if the database server is under load, or if a transaction fails, the operation can leave the plugin in an undefined state. You might see a plugin listed as active in the database but not actually functioning, or vice versa.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"1.2rem","fontWeight":"700"},"spacing":{"margin":{"top":"24px"}}}} -->
+<h3 class="wp-block-heading" style="color:#1a2e5a;font-size:1.2rem;font-weight:700;margin-top:24px">4. WP-Cron Failures and Timing Issues</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#555555"},"typography":{"lineHeight":"1.8"}}} -->
+<p style="color:#555555;line-height:1.8">WP-Cron is notoriously unreliable on low-traffic sites. If a scheduled maintenance task that includes plugin management runs at an unexpected time, or if a cron job fires twice due to a missed previous run, it can interfere with plugin state. This is especially common on sites that rely on WP-Cron for auto-updates.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2,"style":{"color":{"text":"#1a2e5a"},"typography":{"fontSize":"1.6rem","fontWeight":"700"},"spacing":{"margin":{"top":"40px","bottom":"16px"}}}} -->
+<h2 class="wp-block-heading" style="color:#1a2e5a;font-size:1.6rem;font-weight:700;margin-top:40px;margin-bottom:16px">How to Catch It Before Your Customers Do</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#555555"},"typography":{"lineHeight":"1.8"}}} -->
+<p style="color:#555555;line-height:1.8">The fundamental problem is that WordPress does not offer any native alerting for plugin state changes. The best you can do manually is check your plugins screen regularly, which is not realistic at 3 AM when most deactivations happen during overnight maintenance windows.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#555555"},"typography":{"lineHeight":"1.8"}}} -->
+<p style="color:#555555;line-height:1.8">This is exactly the problem that WP Canary&rsquo;s Plugin Status Watchdog was built to solve. It polls your active plugin list every 15 minutes using WP-Cron, compares it against a stored baseline, and immediately triggers an email alert if anything changes. It also maintains a 30-day changelog of every activation and deactivation event, so when something breaks you can see exactly what changed and when, rather than guessing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#555555"},"typography":{"lineHeight":"1.8"}}} -->
+<p style="color:#555555;line-height:1.8">Combined with WP Canary&rsquo;s Morning Email Digest, you get a daily summary of any plugin state changes that occurred overnight, alongside your debug log summary, PHP resource usage, and cron job health. It is not a substitute for a proper staging environment and careful update process, but it is a reliable safety net for the unexpected things that happen on production sites at inconvenient hours.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#555555"},"typography":{"lineHeight":"1.8"}}} -->
+<p style="color:#555555;line-height:1.8">If you have ever been the last person to know your site was broken, that is the problem WP Canary is here to fix.</p>
+<!-- /wp:paragraph -->
+
+</div>
+<!-- /wp:group -->
+]]></content:encoded>
+      <excerpt:encoded><![CDATA[Plugin deactivations are one of the sneakiest WordPress problems — no alerts, no notifications, just a broken site waiting to be discovered. Here are the four most common causes and how to catch them automatically.]]></excerpt:encoded>
+      <wp:post_id>7</wp:post_id>
+      <wp:post_date><![CDATA[2026-06-07 00:00:00]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_date_gmt>
+      <wp:post_modified><![CDATA[2026-06-07 00:00:00]]></wp:post_modified>
+      <wp:post_modified_gmt><![CDATA[2026-06-07 00:00:00]]></wp:post_modified_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[why-wordpress-plugins-mysteriously-deactivate]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[post]]></wp:post_type>
+      <wp:post_password><![CDATA[]]></wp:post_password>
+      <wp:is_sticky>0</wp:is_sticky>
+      <category domain="category" nicename="wordpress-tips"><![CDATA[WordPress Tips]]></category>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+        <wp:meta_value><![CDATA[Plugin deactivations are one of the sneakiest WordPress problems. Learn the four most common causes and how WP Canary's Plugin Status Watchdog catches them automatically.]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+
+  </channel>
+</rss>

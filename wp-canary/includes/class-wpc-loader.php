@@ -65,6 +65,7 @@ class WPC_Loader {
 			require_once WPC_PLUGIN_DIR . 'includes/pro/class-wpc-email-digest.php';
 			require_once WPC_PLUGIN_DIR . 'includes/pro/class-wpc-php-monitor.php';
 			require_once WPC_PLUGIN_DIR . 'includes/pro/class-wpc-cron-health.php';
+			require_once WPC_PLUGIN_DIR . 'includes/pro/class-wpc-plugin-health.php';
 		}
 	}
 
@@ -89,6 +90,7 @@ class WPC_Loader {
 			add_action( 'wp_ajax_wpc_dismiss_alert', array( $admin, 'ajax_dismiss_alert' ) );
 			add_action( 'wp_ajax_wpc_export_log', array( $admin, 'ajax_export_log' ) );
 			add_action( 'wp_ajax_wpc_send_test_digest', array( $admin, 'ajax_send_test_digest' ) );
+			add_action( 'wp_ajax_wpc_run_plugin_health_scan', array( $admin, 'ajax_run_plugin_health_scan' ) );
 		}
 
 		// DB scan cron.
@@ -119,6 +121,10 @@ class WPC_Loader {
 			// Cron health check.
 			$cron_health = new WPC_Cron_Health();
 			add_action( 'wpc_cron_health_check', array( $cron_health, 'run_check' ) );
+
+			// Plugin health scan.
+			$plugin_health = new WPC_Plugin_Health();
+			add_action( 'wpc_plugin_health_scan', array( $plugin_health, 'run_scan' ) );
 		}
 	}
 

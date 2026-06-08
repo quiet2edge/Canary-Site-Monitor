@@ -3,7 +3,7 @@ Contributors: wpsiteguardian
 Tags: database, security, monitoring, diagnostics, maintenance
 Requires at least: 6.0
 Tested up to: 6.5
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -70,6 +70,15 @@ Not yet. WP-CLI support is planned for a future release.
 No. It focuses on diagnostic issues — database integrity, PHP health, cron reliability, and traffic patterns — rather than malware scanning or firewall rules.
 
 == Changelog ==
+
+= 1.1.0 =
+* Free: DB collation mismatch detection for plugin-owned tables.
+* Free: Rank Math SEO tables added to known schema registry.
+* Pro: DB collation repair — ALTER TABLE CONVERT TO CHARACTER SET with validation.
+* Pro: Call stack tracing in Plugin Watchdog (cron, AJAX, WP-CLI, admin user, plugin origin).
+* Pro: New Plugin Health module — update gap detection, license health checks, multi-factor risk assessment.
+* Pro: Plugin Health admin panel with Update Gaps, License Health, and Risk Assessment sections.
+* Pro: Daily email digest now includes Plugin Health warnings.
 
 = 1.0.0 =
 * Initial release.

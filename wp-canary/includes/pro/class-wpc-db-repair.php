@@ -142,6 +142,57 @@ class WPC_DB_Repair {
 	}
 
 	/**
+	 * Convert a table's character set and collation to match the site default.
+	 *
+	 * Caller is responsible for verifying nonce (wpc_admin_nonce) and manage_options capability
+	 * before invoking this method.
+	 *
+	 * @param string $table_name       Full table name (with prefix).
+	 * @param string $target_collation Target collation e.g. utf8mb4_unicode_ci.
+	 * @return true|WP_Error
+	 */
+	public static function repair_collation( $table_name, $target_collation ) {
+		global $wpdb;
+
+		$existing_tables = $wpdb->get_col( 'SHOW TABLES' ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		if ( ! in_array( $table_name, $existing_tables, true ) ) {
+			return new WP_Error( 'invalid_table', __( 'Table does not exist in this database.', 'wp-canary' ) );
+		}
+
+		if ( ! preg_match( '/^[a-z0-9_]+$/i', $target_collation ) ) {
+			return new WP_Error( 'invalid_collation', __( 'Collation name contains invalid characters.', 'wp-canary' ) );
+		}
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$result = $wpdb->query( "ALTER TABLE `{$table_name}` CONVERT TO CHARACTER SET utf8mb4 COLLATE {$target_collation}" );
+
+		$issue = array(
+			'table' => $table_name,
+			'type'  => 'collation_mismatch',
+		);
+
+		if ( false === $result ) {
+			$message = sprintf(
+				/* translators: 1: table name, 2: DB error */
+				__( 'Failed to convert collation on %1$s. DB error: %2$s', 'wp-canary' ),
+				$table_name,
+				$wpdb->last_error
+			);
+			self::log_repair( $issue, 'failed', $message );
+			return new WP_Error( 'repair_failed', $message );
+		}
+
+		$message = sprintf(
+			/* translators: 1: table name, 2: collation */
+			__( 'Successfully converted %1$s to %2$s.', 'wp-canary' ),
+			$table_name,
+			$target_collation
+		);
+		self::log_repair( $issue, 'resolved', $message );
+		return true;
+	}
+
+	/**
 	 * Log the repair action to the wpc_db_issues table.
 	 *
 	 * @param array  $issue  Original issue array.

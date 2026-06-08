@@ -122,6 +122,30 @@ class WPC_DB_Scanner {
 				),
 			),
 
+			// Rank Math SEO.
+			'rank-math' => array(
+				'rank_math_404_logs'      => array(
+					'id'             => 'bigint',
+					'uri'            => 'varchar(255)',
+					'accessed'       => 'datetime',
+					'times_accessed' => 'bigint',
+					'ip'             => 'varchar(40)',
+					'referer'        => 'varchar(255)',
+				),
+				'rank_math_internal_links' => array(
+					'id'                 => 'bigint',
+					'post_id'            => 'bigint',
+					'url'                => 'varchar(255)',
+					'internal_link_type' => 'varchar(100)',
+				),
+				'rank_math_internal_meta'  => array(
+					'object_id'           => 'bigint',
+					'internal_link_count' => 'int',
+					'external_link_count' => 'int',
+					'incoming_link_count' => 'int',
+				),
+			),
+
 			// CF7 / Flamingo.
 			'flamingo' => array(
 				'flamingo_inbound'     => array(
@@ -166,6 +190,98 @@ class WPC_DB_Scanner {
 
 		// General scan of all tables.
 		$issues = array_merge( $issues, $this->scan_general( $existing_tables ) );
+
+		// Collation mismatch detection.
+		$issues = array_merge( $issues, $this->scan_collation_mismatches() );
+
+		return $issues;
+	}
+
+	/**
+	 * Detect collation mismatches between plugin-owned tables and the dominant site collation.
+	 *
+	 * @return array
+	 */
+	public function scan_collation_mismatches() {
+		global $wpdb;
+
+		$issues = array();
+
+		$table_statuses = $wpdb->get_results( 'SHOW TABLE STATUS', ARRAY_A ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		if ( empty( $table_statuses ) ) {
+			return $issues;
+		}
+
+		// Tally collations across all tables to find the dominant one.
+		$collation_counts = array();
+		foreach ( $table_statuses as $row ) {
+			$collation = isset( $row['Collation'] ) ? $row['Collation'] : '';
+			if ( $collation ) {
+				$collation_counts[ $collation ] = ( $collation_counts[ $collation ] ?? 0 ) + 1;
+			}
+		}
+
+		if ( empty( $collation_counts ) ) {
+			return $issues;
+		}
+
+		arsort( $collation_counts );
+		$dominant_collation = array_key_first( $collation_counts );
+
+		$plugin_prefixes = array(
+			$wpdb->prefix . 'wc_',
+			$wpdb->prefix . 'woocommerce_',
+			$wpdb->prefix . 'yoast_',
+			$wpdb->prefix . 'redirection_',
+			$wpdb->prefix . 'flamin',
+			$wpdb->prefix . 'rank',
+		);
+
+		foreach ( $table_statuses as $row ) {
+			$table_name       = $row['Name'] ?? '';
+			$table_collation  = $row['Collation'] ?? '';
+
+			if ( ! $table_name || ! $table_collation ) {
+				continue;
+			}
+
+			if ( $table_collation === $dominant_collation ) {
+				continue;
+			}
+
+			$is_plugin_table = false;
+			foreach ( $plugin_prefixes as $p ) {
+				if ( 0 === strpos( $table_name, $p ) ) {
+					$is_plugin_table = true;
+					break;
+				}
+			}
+
+			if ( ! $is_plugin_table ) {
+				continue;
+			}
+
+			$issues[] = array(
+				'table'            => $table_name,
+				'table_collation'  => $table_collation,
+				'site_collation'   => $dominant_collation,
+				'severity'         => self::SEV_CRITICAL,
+				'type'             => 'collation_mismatch',
+				'message'          => sprintf(
+					'Table %s uses %s but your site uses %s — this mismatch can cause query failures and plugin deactivations.',
+					$table_name,
+					$table_collation,
+					$dominant_collation
+				),
+				'description'      => sprintf(
+					/* translators: 1: table name, 2: table collation, 3: site collation */
+					__( 'Table %1$s uses %2$s but your site uses %3$s — this mismatch can cause query failures and plugin deactivations.', 'wp-canary' ),
+					'<code>' . esc_html( $table_name ) . '</code>',
+					'<code>' . esc_html( $table_collation ) . '</code>',
+					'<code>' . esc_html( $dominant_collation ) . '</code>'
+				),
+			);
+		}
 
 		return $issues;
 	}
@@ -403,6 +519,7 @@ class WPC_DB_Scanner {
 			'yoast'       => 'wordpress-seo/wp-seo.php',
 			'redirection' => 'redirection/redirection.php',
 			'flamingo'    => 'flamingo/flamingo.php',
+			'rank-math'   => 'seo-by-rank-math/rank-math.php',
 		);
 
 		if ( ! isset( $map[ $plugin_id ] ) ) {

@@ -61,6 +61,7 @@ class WPC_Deactivator {
 			'wpc_plugin_watchdog',
 			'wpc_cron_health_check',
 			'wpc_ad_monitor',
+			'wpc_plugin_health_scan',
 		);
 
 		foreach ( $cron_hooks as $hook ) {

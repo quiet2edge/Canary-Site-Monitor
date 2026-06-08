@@ -144,5 +144,10 @@ class WPC_Activator {
 		if ( ! wp_next_scheduled( 'wpc_ad_monitor' ) ) {
 			wp_schedule_event( time() + 180, 'hourly', 'wpc_ad_monitor' );
 		}
+
+		// Plugin health scan — staggered slightly so it doesn't overlap with the DB scan.
+		if ( ! wp_next_scheduled( 'wpc_plugin_health_scan' ) ) {
+			wp_schedule_event( time() + 240, 'daily', 'wpc_plugin_health_scan' );
+		}
 	}
 }

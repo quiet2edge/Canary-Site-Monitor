@@ -29,7 +29,7 @@ class WPC_Plugin_Watchdog {
 	 * @return void
 	 */
 	public function on_plugin_activated( $plugin ) {
-		$this->log_change( $plugin, 'activated' );
+		$this->log_change( $plugin, 'activated', $this->get_change_origin() );
 		$this->update_known_state();
 	}
 
@@ -40,7 +40,7 @@ class WPC_Plugin_Watchdog {
 	 * @return void
 	 */
 	public function on_plugin_deactivated( $plugin ) {
-		$this->log_change( $plugin, 'deactivated' );
+		$this->log_change( $plugin, 'deactivated', $this->get_change_origin() );
 		$this->update_known_state();
 	}
 
@@ -61,12 +61,14 @@ class WPC_Plugin_Watchdog {
 		$activated   = array_diff( $current_plugins, $last_known );
 		$deactivated = array_diff( $last_known, $current_plugins );
 
+		$origin = $this->get_change_origin();
+
 		foreach ( $activated as $plugin ) {
-			$this->log_change( $plugin, 'activated', 'cron' );
+			$this->log_change( $plugin, 'activated', $origin );
 		}
 
 		foreach ( $deactivated as $plugin ) {
-			$this->log_change( $plugin, 'deactivated', 'cron' );
+			$this->log_change( $plugin, 'deactivated', $origin );
 		}
 
 		if ( count( $deactivated ) >= self::MASS_DEACTIVATION_THRESHOLD ) {
@@ -121,6 +123,44 @@ class WPC_Plugin_Watchdog {
 			$plugins = (array) get_option( 'active_plugins', array() );
 		}
 		update_option( 'wpc_last_known_plugins', maybe_serialize( $plugins ) );
+	}
+
+	/**
+	 * Determine the origin of a plugin state change by inspecting runtime context and call stack.
+	 *
+	 * @return string
+	 */
+	private function get_change_origin() {
+		if ( wp_doing_cron() ) {
+			return 'WP-Cron';
+		}
+
+		if ( wp_doing_ajax() ) {
+			return 'AJAX request';
+		}
+
+		if ( defined( 'WP_CLI' ) && WP_CLI ) {
+			return 'WP-CLI';
+		}
+
+		if ( is_admin() ) {
+			$user = wp_get_current_user();
+			if ( $user && $user->ID > 0 ) {
+				return 'Admin user: ' . $user->user_login;
+			}
+		}
+
+		$frames = debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 10 ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions
+		foreach ( $frames as $frame ) {
+			if ( empty( $frame['file'] ) ) {
+				continue;
+			}
+			if ( false !== strpos( $frame['file'], WP_PLUGIN_DIR ) ) {
+				return 'Plugin: ' . basename( dirname( $frame['file'] ) );
+			}
+		}
+
+		return 'Unknown process';
 	}
 
 	/**

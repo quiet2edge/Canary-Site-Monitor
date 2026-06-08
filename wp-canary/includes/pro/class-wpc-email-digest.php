@@ -95,6 +95,31 @@ class WPC_Email_Digest {
 			ARRAY_A
 		) ?? array();
 
+		// Plugin health warnings.
+		$plugin_health          = new WPC_Plugin_Health();
+		$plugin_health_results  = $plugin_health->get_last_scan_results();
+		$data['plugin_health']  = array();
+		if ( ! empty( $plugin_health_results ) ) {
+			foreach ( (array) ( $plugin_health_results['update_gaps'] ?? array() ) as $item ) {
+				if ( in_array( $item['severity'] ?? '', array( 'critical', 'warning' ), true ) ) {
+					$data['plugin_health'][] = array(
+						'plugin_name' => $item['plugin_name'] ?? '',
+						'message'     => $item['message'] ?? '',
+						'severity'    => $item['severity'],
+					);
+				}
+			}
+			foreach ( (array) ( $plugin_health_results['license_health'] ?? array() ) as $item ) {
+				if ( in_array( $item['severity'] ?? '', array( 'critical', 'warning' ), true ) ) {
+					$data['plugin_health'][] = array(
+						'plugin_name' => $item['plugin_name'] ?? '',
+						'message'     => $item['message'] ?? '',
+						'severity'    => $item['severity'],
+					);
+				}
+			}
+		}
+
 		// Health score.
 		$data['health_score'] = $this->calculate_health_score( $data );
 
@@ -250,6 +275,22 @@ class WPC_Email_Digest {
     <?php endforeach; ?>
     </table>
     <p style="margin:8px 0 0;font-size:12px;"><a href="<?php echo esc_url( admin_url( 'admin.php?page=wpc-plugin-watchdog' ) ); ?>" style="color:#0073aa;"><?php esc_html_e( 'View Plugin Watchdog →', 'wp-canary' ); ?></a></p>
+  </td></tr>
+  <?php endif; ?>
+
+  <!-- Plugin Health Warnings -->
+  <?php if ( ! empty( $data['plugin_health'] ) ) : ?>
+  <tr><td style="padding:0 32px 24px;">
+    <h3 style="margin:0 0 8px;font-size:14px;color:#e36209;"><?php esc_html_e( 'Plugin Health Warnings', 'wp-canary' ); ?></h3>
+    <table width="100%" border="0" cellpadding="6" cellspacing="0" style="font-size:13px;border-collapse:collapse;">
+    <?php foreach ( $data['plugin_health'] as $ph ) : ?>
+      <tr style="border-bottom:1px solid #f0f0f0;">
+        <td style="font-weight:bold;width:160px;"><?php echo esc_html( $ph['plugin_name'] ); ?></td>
+        <td><?php echo esc_html( $ph['message'] ); ?></td>
+      </tr>
+    <?php endforeach; ?>
+    </table>
+    <p style="margin:8px 0 0;font-size:12px;"><a href="<?php echo esc_url( admin_url( 'admin.php?page=wpc-plugin-health' ) ); ?>" style="color:#0073aa;"><?php esc_html_e( 'View Plugin Health →', 'wp-canary' ); ?></a></p>
   </td></tr>
   <?php endif; ?>
 

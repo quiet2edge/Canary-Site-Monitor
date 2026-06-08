@@ -77,6 +77,15 @@ class WPC_Admin {
 
 		add_submenu_page(
 			self::MENU_SLUG,
+			__( 'Plugin Health', 'wp-canary' ),
+			__( 'Plugin Health', 'wp-canary' ),
+			$capability,
+			'wpc-plugin-health',
+			array( $this, 'render_plugin_health' )
+		);
+
+		add_submenu_page(
+			self::MENU_SLUG,
 			__( 'Reports', 'wp-canary' ),
 			__( 'Reports', 'wp-canary' ),
 			$capability,
@@ -136,6 +145,7 @@ class WPC_Admin {
 			'site-guardian_page_wpc-database',
 			'site-guardian_page_wpc-404-monitor',
 			'site-guardian_page_wpc-plugin-watchdog',
+			'site-guardian_page_wpc-plugin-health',
 			'site-guardian_page_wpc-reports',
 			'site-guardian_page_wpc-settings',
 		);
@@ -217,6 +227,15 @@ class WPC_Admin {
 	 */
 	public function render_plugin_watchdog() {
 		require_once WPC_PLUGIN_DIR . 'admin/views/plugin-watchdog.php';
+	}
+
+	/**
+	 * Render the Plugin Health page.
+	 *
+	 * @return void
+	 */
+	public function render_plugin_health() {
+		require_once WPC_PLUGIN_DIR . 'admin/views/plugin-health.php';
 	}
 
 	/**
@@ -424,6 +443,33 @@ class WPC_Admin {
 		}
 
 		wp_send_json_success( array( 'csv' => $csv, 'filename' => "wpc-{$log_type}-log-" . gmdate( 'Y-m-d' ) . '.csv' ) );
+	}
+
+	/**
+	 * AJAX: run the Plugin Health scan (Pro only).
+	 *
+	 * @return void
+	 */
+	public function ajax_run_plugin_health_scan() {
+		check_ajax_referer( 'wpc_admin_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( array( 'message' => __( 'Insufficient permissions.', 'wp-canary' ) ) );
+		}
+
+		if ( ! wpc_is_pro() ) {
+			wp_send_json_error( array( 'message' => __( 'Plugin Health requires WP Canary Pro.', 'wp-canary' ) ) );
+		}
+
+		$health  = new WPC_Plugin_Health();
+		$results = $health->run_scan();
+
+		wp_send_json_success(
+			array(
+				'message'    => __( 'Scan complete.', 'wp-canary' ),
+				'scanned_at' => $results['scanned_at'],
+			)
+		);
 	}
 
 	/**

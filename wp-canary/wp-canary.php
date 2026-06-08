@@ -3,7 +3,7 @@
  * Plugin Name:       WP Canary
  * Plugin URI:        https://wpsiteguardian.com
  * Description:       Proactive WordPress diagnostic plugin that detects, explains, and fixes site-breaking issues before they cause downtime.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            WP Canary
@@ -33,7 +33,7 @@ if ( function_exists( 'wpc_fs' ) ) {
 	if ( ! function_exists( 'wpc_fs' ) ) {
 
 		// Plugin constants.
-		define( 'WPC_VERSION', '1.0.0' );
+		define( 'WPC_VERSION', '1.1.0' );
 		define( 'WPC_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 		define( 'WPC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 		define( 'WPC_PLUGIN_FILE', __FILE__ );

@@ -104,7 +104,11 @@ if ( function_exists( 'wpc_fs' ) ) {
 	// Load core files.
 	require_once WPC_PLUGIN_DIR . 'includes/class-wpc-activator.php';
 	require_once WPC_PLUGIN_DIR . 'includes/class-wpc-deactivator.php';
+	require_once WPC_PLUGIN_DIR . 'includes/class-wpc-uninstaller.php';
 	require_once WPC_PLUGIN_DIR . 'includes/class-wpc-loader.php';
+
+	// Uninstall cleanup, handled via Freemius.
+	wpc_fs()->add_action( 'after_uninstall', array( 'WPC_Uninstaller', 'uninstall' ) );
 
 	/**
 	 * Activation hook callback.

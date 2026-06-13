@@ -1,0 +1,24 @@
+Subject: Imunify360 WAF blocking REST API / outbound verification requests on mysticautodetailing.universallyfound.net
+
+Hello,
+
+I'm testing a WordPress plugin on mysticautodetailing.universallyfound.net and have run into an issue caused by Imunify360's Web Application Firewall (WAF) / proactive defense on this domain.
+
+The issue:
+When any external server (or a simple curl/script request) tries to reach https://mysticautodetailing.universallyfound.net/wp-json/, it receives an interstitial "One moment, please... Please wait while your request is being verified..." JS-challenge page instead of the normal WordPress REST API JSON response.
+
+This blocks:
+- The WordPress REST API (/wp-json/*), which many plugins and the core WordPress dashboard rely on.
+- Third-party licensing/update services (in my case, Freemius) that perform a server-to-server check against the site to verify a plugin's SDK integration.
+
+I've already disabled ModSecurity for this domain and deactivated all WordPress plugins that could interfere, but the challenge page is still served — it appears to be coming from Imunify360 at the account/server level, which I do not have permission to adjust myself.
+
+What I need:
+Could you please either:
+1. Disable Imunify360's WAF/JS-challenge for this specific domain (mysticautodetailing.universallyfound.net), or
+2. Whitelist requests to /wp-json/* on this domain so the REST API responds normally to both browser and server-to-server requests, or
+3. Whitelist Freemius's verification requests specifically (Freemius API: api.freemius.com) if that's a more targeted option.
+
+This is a development/test site, so a temporary or permanent disable of the WAF for this domain is fine on my end.
+
+Thank you for your help!

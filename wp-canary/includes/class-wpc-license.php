@@ -28,6 +28,27 @@ class WPC_License {
 	}
 
 	/**
+	 * Whether the site has connected/opted in to Freemius.
+	 *
+	 * The Account page is only registered for sites that are
+	 * connected, so we must not link to it otherwise.
+	 *
+	 * @return bool
+	 */
+	public static function is_connected() {
+		return wpc_fs()->is_registered();
+	}
+
+	/**
+	 * Return the URL to connect/opt in to Freemius.
+	 *
+	 * @return string
+	 */
+	public static function get_connect_url() {
+		return wpc_fs()->get_reconnect_url();
+	}
+
+	/**
 	 * Return the upgrade URL.
 	 *
 	 * @return string

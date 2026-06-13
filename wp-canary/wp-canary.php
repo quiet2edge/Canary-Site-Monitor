@@ -77,7 +77,7 @@ if ( function_exists( 'wpc_fs' ) ) {
 						'slug'       => 'wpc-settings',
 						'first-path' => 'admin.php?page=wpc-getting-started',
 						'support'    => false,
-						'network'    => true,
+						'network'    => is_multisite(),
 					),
 				) );
 			}

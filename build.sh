@@ -25,6 +25,7 @@ find "$BUILD_DIR/$PLUGIN_SLUG" -name "*.map" -delete
 find "$BUILD_DIR/$PLUGIN_SLUG" -name ".DS_Store" -delete
 find "$BUILD_DIR/$PLUGIN_SLUG" -name "Thumbs.db" -delete
 
+rm -f "${DIST}/${PLUGIN_SLUG}-${VERSION}.zip"
 cd "$BUILD_DIR"
 zip -rq "${OLDPWD}/${DIST}/${PLUGIN_SLUG}-${VERSION}.zip" "$PLUGIN_SLUG"
 cd - > /dev/null
@@ -59,6 +60,7 @@ done
 # Update readme stable tag
 sed -i "s/Stable tag: .*/Stable tag: ${VERSION}/" "$LITE_DIR/readme.txt"
 
+rm -f "${DIST}/${PLUGIN_SLUG}-lite-${VERSION}.zip"
 cd "$BUILD_DIR"
 zip -rq "${OLDPWD}/${DIST}/${PLUGIN_SLUG}-lite-${VERSION}.zip" "${PLUGIN_SLUG}-lite"
 cd - > /dev/null

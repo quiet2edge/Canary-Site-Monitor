@@ -2,7 +2,7 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @package WP_Site_Guardian
+ * @package WP_Canary
  */
 
 // If uninstall not called from WordPress, exit.

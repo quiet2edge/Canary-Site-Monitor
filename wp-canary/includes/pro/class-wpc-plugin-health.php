@@ -2,7 +2,7 @@
 /**
  * Plugin Health module (Pro).
  *
- * @package WP_Site_Guardian
+ * @package WP_Canary
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

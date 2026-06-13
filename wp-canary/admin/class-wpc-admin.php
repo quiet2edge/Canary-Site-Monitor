@@ -2,7 +2,7 @@
 /**
  * Admin UI controller.
  *
- * @package WP_Site_Guardian
+ * @package WP_Canary
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -30,8 +30,8 @@ class WPC_Admin {
 		$capability = is_multisite() ? 'manage_network_options' : 'manage_options';
 
 		add_menu_page(
-			__( 'Site Guardian', 'wp-canary' ),
-			__( 'Site Guardian', 'wp-canary' ),
+			__( 'WP Canary', 'wp-canary' ),
+			__( 'WP Canary', 'wp-canary' ),
 			$capability,
 			self::MENU_SLUG,
 			array( $this, 'render_dashboard' ),
@@ -142,12 +142,12 @@ class WPC_Admin {
 	public function enqueue_scripts( $hook_suffix ) {
 		$wpc_pages = array(
 			'toplevel_page_wp-canary',
-			'site-guardian_page_wpc-database',
-			'site-guardian_page_wpc-404-monitor',
-			'site-guardian_page_wpc-plugin-watchdog',
-			'site-guardian_page_wpc-plugin-health',
-			'site-guardian_page_wpc-reports',
-			'site-guardian_page_wpc-settings',
+			'wp-canary_page_wpc-database',
+			'wp-canary_page_wpc-404-monitor',
+			'wp-canary_page_wpc-plugin-watchdog',
+			'wp-canary_page_wpc-plugin-health',
+			'wp-canary_page_wpc-reports',
+			'wp-canary_page_wpc-settings',
 		);
 
 		if ( ! in_array( $hook_suffix, $wpc_pages, true ) ) {

@@ -2,7 +2,7 @@
 /**
  * Settings view.
  *
- * @package WP_Site_Guardian
+ * @package WP_Canary
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -112,9 +112,9 @@ if ( isset( $_POST['wpc_delete_data_nonce'] )
 			<strong><?php echo esc_html( WPC_License::get_plan_label() ); ?></strong>
 		</p>
 		<?php if ( wpc_is_pro() ) : ?>
-		<p><a href="<?php echo esc_url( WPC_License::get_account_url() ); ?>" class="button" target="_blank" rel="noopener"><?php esc_html_e( 'Manage License', 'wp-canary' ); ?></a></p>
+		<p><a href="<?php echo esc_url( WPC_License::get_account_url() ); ?>" class="button"><?php esc_html_e( 'Manage License', 'wp-canary' ); ?></a></p>
 		<?php else : ?>
-		<p><a href="<?php echo esc_url( WPC_License::get_upgrade_url() ); ?>" class="button button-primary" target="_blank" rel="noopener"><?php esc_html_e( 'Upgrade to Pro', 'wp-canary' ); ?></a></p>
+		<p><a href="<?php echo esc_url( WPC_License::get_upgrade_url() ); ?>" class="button button-primary"><?php esc_html_e( 'Upgrade to Pro', 'wp-canary' ); ?></a></p>
 		<?php endif; ?>
 	</div>
 

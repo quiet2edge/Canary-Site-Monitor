@@ -2,7 +2,7 @@
 /**
  * Registers all hooks and loads all modules for the plugin.
  *
- * @package WP_Site_Guardian
+ * @package WP_Canary
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

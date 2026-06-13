@@ -2,7 +2,7 @@
 /**
  * License / Freemius helper.
  *
- * @package WP_Site_Guardian
+ * @package WP_Canary
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,11 +24,7 @@ class WPC_License {
 	 * @return string
 	 */
 	public static function get_account_url() {
-		$fs = wpc_fs();
-		if ( null !== $fs && method_exists( $fs, 'get_account_url' ) ) {
-			return $fs->get_account_url();
-		}
-		return 'https://wpsiteguardian.com/account/';
+		return wpc_fs()->get_account_url();
 	}
 
 	/**
@@ -37,11 +33,7 @@ class WPC_License {
 	 * @return string
 	 */
 	public static function get_upgrade_url() {
-		$fs = wpc_fs();
-		if ( null !== $fs && method_exists( $fs, 'get_upgrade_url' ) ) {
-			return $fs->get_upgrade_url();
-		}
-		return 'https://wpsiteguardian.com/pricing/';
+		return wpc_fs()->get_upgrade_url();
 	}
 
 	/**

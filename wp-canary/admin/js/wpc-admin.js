@@ -1,7 +1,7 @@
 /**
  * WP Canary — Admin JavaScript
  *
- * @package WP_Site_Guardian
+ * @package WP_Canary
  */
 /* global wpcData, jQuery */
 ( function ( $ ) {

@@ -40,7 +40,7 @@ Most monitoring plugins either flood you with incomprehensible error logs or onl
 
 1. Upload the `wp-canary` folder to the `/wp-content/plugins/` directory, or install directly via **Plugins → Add New**.
 2. Activate the plugin through the **Plugins** screen in WordPress.
-3. Navigate to **Site Guardian** in the WordPress admin sidebar.
+3. Navigate to **WP Canary** in the WordPress admin sidebar.
 4. Click **Run Full Scan Now** on the Dashboard to get an immediate health report.
 
 = Multisite =
@@ -59,7 +59,7 @@ The repair feature only performs `ALTER TABLE ADD COLUMN` and engine-conversion 
 
 = What happens to my data if I uninstall the plugin? =
 
-By default, all custom tables and options are removed on uninstall. If you want to preserve your data, check "Keep Data on Uninstall" in **Site Guardian → Settings** before deleting the plugin.
+By default, all custom tables and options are removed on uninstall. If you want to preserve your data, check "Keep Data on Uninstall" in **WP Canary → Settings** before deleting the plugin.
 
 = Does this work with WP-CLI? =
 

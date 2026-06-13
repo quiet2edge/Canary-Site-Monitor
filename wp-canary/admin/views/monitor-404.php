@@ -2,7 +2,7 @@
 /**
  * 404 Monitor view.
  *
- * @package WP_Site_Guardian
+ * @package WP_Canary
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

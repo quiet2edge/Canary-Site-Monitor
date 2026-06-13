@@ -2,7 +2,7 @@
 /**
  * Creates and manages custom database tables.
  *
- * @package WP_Site_Guardian
+ * @package WP_Canary
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

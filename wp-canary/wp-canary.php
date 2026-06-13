@@ -74,7 +74,7 @@ if ( function_exists( 'wpc_fs' ) ) {
 						'is_require_payment' => true,
 					),
 					'menu'                => array(
-						'slug'       => 'wpc-settings',
+						'slug'       => 'wp-canary',
 						'first-path' => 'admin.php?page=wpc-getting-started',
 						'support'    => false,
 						'network'    => is_multisite(),

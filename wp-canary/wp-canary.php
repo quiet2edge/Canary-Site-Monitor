@@ -70,7 +70,7 @@ if ( function_exists( 'wpc_fs' ) ) {
 					// auto-generated free version, delete this line before uploading to wp.org.
 					'wp_org_gatekeeper'   => 'OA7#BoRiBNqdf52FvzEf!!074aRLPs8fspif$7K1#4u4Csys1fQlCecVcUTOs2mcpeVHi#C2j9d09fOTvbC0HloPT7fFee5WdS3G',
 					'trial'               => array(
-						'days'               => 3,
+						'days'               => 4,
 						'is_require_payment' => true,
 					),
 					'menu'                => array(

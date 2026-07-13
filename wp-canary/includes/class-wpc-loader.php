@@ -9,57 +9,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Class WPC_Loader
- *
- * Responsible for requiring all class files and registering
- * WordPress hooks that power the plugin.
- */
 class WPC_Loader {
 
-	/**
-	 * Array of actions to register.
-	 *
-	 * @var array
-	 */
 	protected $actions = array();
-
-	/**
-	 * Array of filters to register.
-	 *
-	 * @var array
-	 */
 	protected $filters = array();
 
-	/**
-	 * Constructor: load all required files.
-	 */
 	public function __construct() {
 		$this->load_dependencies();
 		$this->register_hooks();
 	}
 
-	/**
-	 * Load all class files.
-	 *
-	 * @return void
-	 */
 	private function load_dependencies() {
-		// Core includes always loaded.
 		require_once WPC_PLUGIN_DIR . 'includes/class-wpc-db-tables.php';
+		require_once WPC_PLUGIN_DIR . 'includes/class-wpc-validate.php';
 		require_once WPC_PLUGIN_DIR . 'includes/class-wpc-license.php';
 		require_once WPC_PLUGIN_DIR . 'includes/free/class-wpc-db-scanner.php';
+		require_once WPC_PLUGIN_DIR . 'includes/free/class-wpc-plugin-watchdog.php';
+		require_once WPC_PLUGIN_DIR . 'includes/free/class-wpc-404-monitor.php';
 
-		// Admin-only classes.
 		if ( is_admin() || wp_doing_ajax() ) {
 			require_once WPC_PLUGIN_DIR . 'admin/class-wpc-admin.php';
 		}
 
-		// Pro modules.
 		if ( wpc_is_pro() ) {
 			require_once WPC_PLUGIN_DIR . 'includes/pro/class-wpc-db-repair.php';
-			require_once WPC_PLUGIN_DIR . 'includes/pro/class-wpc-plugin-watchdog.php';
-			require_once WPC_PLUGIN_DIR . 'includes/pro/class-wpc-404-monitor.php';
 			require_once WPC_PLUGIN_DIR . 'includes/pro/class-wpc-ad-monitor.php';
 			require_once WPC_PLUGIN_DIR . 'includes/pro/class-wpc-debug-log.php';
 			require_once WPC_PLUGIN_DIR . 'includes/pro/class-wpc-email-digest.php';
@@ -69,16 +42,9 @@ class WPC_Loader {
 		}
 	}
 
-	/**
-	 * Register all WordPress hooks.
-	 *
-	 * @return void
-	 */
 	private function register_hooks() {
-		// Cron schedules.
 		add_filter( 'cron_schedules', array( $this, 'register_cron_schedules' ) );
 
-		// Admin menu and AJAX.
 		if ( is_admin() || wp_doing_ajax() ) {
 			$admin = new WPC_Admin();
 			add_action( 'admin_menu', array( $admin, 'add_plugin_admin_menu' ) );
@@ -93,47 +59,33 @@ class WPC_Loader {
 			add_action( 'wp_ajax_wpc_run_plugin_health_scan', array( $admin, 'ajax_run_plugin_health_scan' ) );
 		}
 
-		// DB scan cron.
 		add_action( 'wpc_db_scan', array( $this, 'run_scheduled_db_scan' ) );
 
-		// Pro-only hooks.
+		if ( ! is_admin() ) {
+			$monitor_404 = new WPC_404_Monitor();
+			add_action( 'wp', array( $monitor_404, 'maybe_log_404' ) );
+		}
+
+		$watchdog = new WPC_Plugin_Watchdog();
+		add_action( 'activated_plugin', array( $watchdog, 'on_plugin_activated' ), 10, 1 );
+		add_action( 'deactivated_plugin', array( $watchdog, 'on_plugin_deactivated' ), 10, 1 );
+		add_action( 'wpc_plugin_watchdog', array( $watchdog, 'run_cron_check' ) );
+
 		if ( wpc_is_pro() ) {
-			// 404 monitor on non-admin front-end.
-			if ( ! is_admin() ) {
-				$monitor_404 = new WPC_404_Monitor();
-				add_action( 'wp', array( $monitor_404, 'maybe_log_404' ) );
-			}
-
-			// Plugin watchdog hooks.
-			$watchdog = new WPC_Plugin_Watchdog();
-			add_action( 'activated_plugin', array( $watchdog, 'on_plugin_activated' ), 10, 1 );
-			add_action( 'deactivated_plugin', array( $watchdog, 'on_plugin_deactivated' ), 10, 1 );
-			add_action( 'wpc_plugin_watchdog', array( $watchdog, 'run_cron_check' ) );
-
-			// Email digest cron.
 			$digest = new WPC_Email_Digest();
 			add_action( 'wpc_daily_digest', array( $digest, 'send_digest' ) );
 
-			// Ad monitor cron.
 			$ad_monitor = new WPC_Ad_Monitor();
 			add_action( 'wpc_ad_monitor', array( $ad_monitor, 'run_analysis' ) );
 
-			// Cron health check.
 			$cron_health = new WPC_Cron_Health();
 			add_action( 'wpc_cron_health_check', array( $cron_health, 'run_check' ) );
 
-			// Plugin health scan.
 			$plugin_health = new WPC_Plugin_Health();
 			add_action( 'wpc_plugin_health_scan', array( $plugin_health, 'run_scan' ) );
 		}
 	}
 
-	/**
-	 * Add custom cron schedules.
-	 *
-	 * @param array $schedules Existing schedules.
-	 * @return array
-	 */
 	public function register_cron_schedules( $schedules ) {
 		$schedules['wpc_every_15min'] = array(
 			'interval' => 15 * MINUTE_IN_SECONDS,
@@ -146,11 +98,6 @@ class WPC_Loader {
 		return $schedules;
 	}
 
-	/**
-	 * Run the scheduled DB scan.
-	 *
-	 * @return void
-	 */
 	public function run_scheduled_db_scan() {
 		$scanner = new WPC_DB_Scanner();
 		$results = $scanner->scan_all();
@@ -158,14 +105,7 @@ class WPC_Loader {
 		update_option( 'wpc_last_db_scan_time', current_time( 'mysql' ) );
 	}
 
-	/**
-	 * Execute all registered hooks.
-	 *
-	 * @return void
-	 */
 	public function run() {
-		// All hooks are registered in the constructor via register_hooks().
-		// This method exists as the canonical entry point.
 		do_action( 'wpc_loaded' );
 	}
 }

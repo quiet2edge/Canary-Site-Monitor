@@ -1,18 +1,23 @@
 <?php
 /**
  * Plugin Name:       WP Canary
- * Plugin URI:        https://wpsiteguardian.com
- * Description:       Proactive WordPress diagnostic plugin that detects, explains, and fixes site-breaking issues before they cause downtime.
- * Version:           1.1.0
+ * Plugin URI:        https://getwpcanary.com
+ * Description:       Monitors your WordPress site for database errors, plugin changes, 404 floods, and PHP errors, and explains what it finds in plain English.
+ * Version:           1.1.2
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            WP Canary
- * Author URI:        https://wpsiteguardian.com
+ * Author URI:        https://getwpcanary.com
  * License:           GPL-2.0+
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wp-canary
  * Domain Path:       /languages
  * Network:           true
+ *
+ * Freemius strips the path below when it generates the free (WordPress.org)
+ * build. Nothing outside a wpc_is_pro() guard may reference these files.
+ *
+ * @fs_premium_only /includes/pro/
  *
  * @package WP_Canary
  */
@@ -33,7 +38,7 @@ if ( function_exists( 'wpc_fs' ) ) {
 	if ( ! function_exists( 'wpc_fs' ) ) {
 
 		// Plugin constants.
-		define( 'WPC_VERSION', '1.1.0' );
+		define( 'WPC_VERSION', '1.1.2' );
 		define( 'WPC_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 		define( 'WPC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 		define( 'WPC_PLUGIN_FILE', __FILE__ );
@@ -57,7 +62,7 @@ if ( function_exists( 'wpc_fs' ) ) {
 
 				$wpc_fs = fs_dynamic_init( array(
 					'id'                  => '31489',
-					'slug'                => 'wp-canary---because-you-shouldnt-wake-up-to-a-broken-site',
+					'slug'                => 'wp-canary',
 					'type'                => 'plugin',
 					'public_key'          => 'pk_e3610dadf66440da415f8363dffac',
 					'is_premium'          => true,
@@ -66,8 +71,7 @@ if ( function_exists( 'wpc_fs' ) ) {
 					'has_addons'          => false,
 					'has_paid_plans'      => true,
 					'is_org_compliant'    => true,
-					// Automatically removed in the free version. If you're not using the
-					// auto-generated free version, delete this line before uploading to wp.org.
+					// Automatically removed in the free version.
 					'wp_org_gatekeeper'   => 'OA7#BoRiBNqdf52FvzEf!!074aRLPs8fspif$7K1#4u4Csys1fQlCecVcUTOs2mcpeVHi#C2j9d09fOTvbC0HloPT7fFee5WdS3G',
 					'trial'               => array(
 						'days'               => 4,
@@ -98,7 +102,17 @@ if ( function_exists( 'wpc_fs' ) ) {
 	 */
 	function wpc_is_pro() {
 		$fs = wpc_fs();
-		return $fs->is__premium_only() || ! $fs->is_free_plan();
+
+		/*
+		 * is__premium_only()     -> true only when running the premium build, i.e. when
+		 *                           the files under /includes/pro/ actually exist on disk.
+		 * can_use_premium_code() -> true when the site is in trial or holds a valid licence.
+		 *
+		 * Both are required. Dropping the first would let a licensed site running the
+		 * stripped free build attempt to require /includes/pro/ files that Freemius
+		 * removed, which is a fatal error.
+		 */
+		return $fs->is__premium_only() && $fs->can_use_premium_code();
 	}
 
 	// Load core files.
